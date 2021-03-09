@@ -1,0 +1,42 @@
+footer {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 14px;
+  height: 60px;
+  background-color: rgb(169, 175, 175);
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.logo {
+  margin: auto;
+  width: 50px;
+}
+
+.gitBlock {
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.year {
+  margin: auto;
+}
+
+.gitLogo {
+  height: 20px;
+}
+
+.gitLinks {
+  text-decoration: none;
+  margin-right: 20px;
+  color: white;
+}
+
+@media (max-width: 500px) {
+    .gitBlock {
+        display: flex;
+        flex-direction: column;  
+      }
+}
+
