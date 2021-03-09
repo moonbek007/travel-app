@@ -1,0 +1,63 @@
+html {
+	background-color: #f7f7f7;
+}
+
+h1 {
+	margin: 0;
+}
+
+.main {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 13pt;
+	color: #696969;
+	font-weight: 300;
+	line-height: 2.25em;
+}
+
+.widget, .photoBox, .countryInfo, .mapBox, .mapBox {
+	height: 200px;
+	margin: 0 50px;
+	border-radius: 20px;
+	margin-top: 20px;
+}
+
+.widget, .countryInfo, .mapBox {
+	background-color: #d14242;
+	min-height: 200px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.photoBox {
+	background-color: blueviolet;
+}
+
+.countryInfo {
+	background-color: rgb(31, 215, 221);
+}
+
+.mapBox {
+	background-color: rgb(207, 100, 198);
+	margin-bottom: 20px;
+}
+
+.weather, .date, .currency, .mainPhoto, .map {
+	flex: 1;
+	background-color: rgb(218, 198, 86);
+	margin: 10px;
+	border-radius: 5px;
+	text-align: center;
+}
+
+.mainPhoto {
+	flex: 1;
+}
+
+.info, .text {
+	flex: 2;
+	background-color: rgb(218, 198, 86);
+	margin: 10px;
+	border-radius: 5px;
+	text-align: center;
+}
+
