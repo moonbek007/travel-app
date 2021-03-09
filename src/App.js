@@ -1,9 +1,12 @@
 import React from 'react';
 import './App.css';
+import Main from './components/Main/Main';
 
 function App() {
   return (
-    null
+    <div className='app'>
+      <Main />
+    </div>
   );
 }
 
