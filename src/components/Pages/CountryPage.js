@@ -2,6 +2,7 @@ import React from "react";
 import s from "./countryPage.module.css";
 
 import Widgets from "../Widgets/Widgets";
+import MapWidget from "./map/Map";
 
 const CountryPage = () => {
   return (
@@ -22,11 +23,11 @@ const CountryPage = () => {
         </div>
 
         <div className={s.mapBox}>
+          <div className={s.map}>
+            <MapWidget />
+          </div>
           <div className={s.text}>
             some text
-          </div>
-          <div className={s.map}>
-            MAP
           </div>
         </div>
       </div>

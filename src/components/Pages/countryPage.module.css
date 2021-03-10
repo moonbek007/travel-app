@@ -14,8 +14,8 @@ h1 {
 	line-height: 2.25em;
 }
 
-.widget, .photoBox, .countryInfo, .mapBox, .mapBox {
-	height: 200px;
+.widget, .photoBox, .countryInfo, .mapBox {
+	min-height: 200px;
 	margin: 0 50px;
 	border-radius: 20px;
 	margin-top: 20px;
@@ -26,6 +26,7 @@ h1 {
 	min-height: 200px;
 	display: flex;
 	justify-content: space-between;
+	flex-wrap: wrap;
 }
 
 .photoBox {
@@ -41,7 +42,7 @@ h1 {
 	margin-bottom: 20px;
 }
 
-.weather, .date, .currency, .mainPhoto, .map {
+.weather, .date, .currency, .mainPhoto, .text {
 	flex: 1;
 	background-color: rgb(218, 198, 86);
 	margin: 10px;
@@ -53,11 +54,15 @@ h1 {
 	flex: 1;
 }
 
-.info, .text {
+.info, .map  {
 	flex: 2;
 	background-color: rgb(218, 198, 86);
 	margin: 10px;
 	border-radius: 5px;
 	text-align: center;
+}
+
+.map {
+	height: calc(100vw/3);
 }
 
