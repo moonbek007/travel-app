@@ -3,17 +3,20 @@ import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import CountryPage from "./components/Pages/CountryPage";
+import MainPageHeader from "./components/Header/MainPageHeader";
 import Main from "./components/Main/Main";
-import Footer from './components/Footer/Footer'
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
     <Router>
-      <div className='app'>
+      <div className="app">
         <Switch>
-          <Route path='/country' component={CountryPage} />
-          <Route path='/' component={Main} />
-          <Main />
+          <Route path="/country" component={CountryPage} />
+          <Route path="/">
+            <MainPageHeader />
+            <Main />
+          </Route>
         </Switch>
         <Footer />
       </div>
