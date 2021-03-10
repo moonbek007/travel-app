@@ -5,7 +5,7 @@ import rightArrowLogo from "../../assets/right_arrow.svg";
 import searchLogo from "../../assets/search_icon.svg";
 import clearLogo from "../../assets/clear_icon.svg";
 import travelAppLogo from "../../assets/travel_app_logo.png";
-function Header() {
+function MainPageHeader() {
   return (
     <header>
       <div className={headerStyles.rowOne}>
@@ -37,4 +37,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default MainPageHeader;
