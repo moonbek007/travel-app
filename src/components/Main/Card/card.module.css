@@ -3,13 +3,17 @@
   border-radius: 15px;
 }
 
+.outside_wrap {
+  margin: 32px 42px;
+}
+
 .wrapper {
   transition: all 0.3s;
   font-family: Tahoma, sans-serif;
   height: 460px;
   min-width: 320px;
   width: 30%; 
-  margin: 32px 42px;
+  
   border-radius: 15px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -58,7 +62,7 @@
 }
 
 @media (max-width: 1024px) {
-  .wrapper {
+  .outside_wrap {
     margin: 16px 20px;
   }
 }
@@ -66,5 +70,8 @@
 @media (max-width: 480px) {
   .wrapper {
     min-width: 280px;
+  }
+  .outside_wrap {
+    margin: 16px 0;
   }
 }

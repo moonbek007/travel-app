@@ -4,11 +4,9 @@ import { Link } from "react-router-dom";
 
 const Card = ({ imgUrl, country, capital }) => {
   return (
-    <Link to='/country'> 
-      <div 
-        className={s.wrapper}
-        style={{ backgroundImage: `url(${imgUrl})` }}
-      >
+    <div className={s.outside_wrap}>
+      <Link to='/country'> 
+      <div className={s.wrapper} style={{ backgroundImage: `url(${imgUrl})` }}>
         <div className={s.inner}>
           <div className={s.country}>
             <span className={s.location}>{country}</span>
@@ -19,6 +17,7 @@ const Card = ({ imgUrl, country, capital }) => {
         </div>
       </div>
     </Link>
+    </div>
   );
 };
 
