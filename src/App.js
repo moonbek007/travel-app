@@ -13,6 +13,7 @@ function App() {
         <Switch>
           <Route path='/country' component={CountryPage} />
           <Route path='/' component={Main} />
+          <Main />
         </Switch>
         <Footer />
       </div>
