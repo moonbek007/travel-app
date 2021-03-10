@@ -3,7 +3,7 @@ import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import CountryPage from "./components/Pages/CountryPage";
-import Header from "./components/Header/Header";
+import MainPageHeader from "./components/Header/MainPageHeader";
 import Main from "./components/Main/Main";
 import Footer from "./components/Footer/Footer";
 
@@ -14,7 +14,7 @@ function App() {
         <Switch>
           <Route path="/country" component={CountryPage} />
           <Route path="/">
-            <Header />
+            <MainPageHeader />
             <Main />
           </Route>
         </Switch>

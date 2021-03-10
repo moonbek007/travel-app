@@ -2,10 +2,8 @@ import React from "react";
 import headerStyles from "./header.module.css";
 import leftArrowLogo from "../../assets/left_arrow.svg";
 import rightArrowLogo from "../../assets/right_arrow.svg";
-import searchLogo from "../../assets/search_icon.svg";
-import clearLogo from "../../assets/clear_icon.svg";
 import travelAppLogo from "../../assets/travel_app_logo.png";
-function Header() {
+function CardHeader() {
   return (
     <header>
       <div className={headerStyles.rowOne}>
@@ -24,17 +22,9 @@ function Header() {
           <img src={rightArrowLogo} alt="right-arrow-logo" />
         </button>
       </div>
-      <div className={headerStyles.rowThree}>
-        <input type="text" placeholder="e.g. Italy , e.g. Rome" />
-        <button>
-          <img src={searchLogo} alt="search-icon" />
-        </button>
-        <button>
-          <img src={clearLogo} alt="clear-icon" />
-        </button>
-      </div>
+      <div className={headerStyles.rowThree}></div>
     </header>
   );
 }
 
-export default Header;
+export default CardHeader;
