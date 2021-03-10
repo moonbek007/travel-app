@@ -1,60 +1,73 @@
-.wrapper,
-.wrapper::before {
-  border-radius: 15px;
+*{
+  margin: 0;
+  padding: 0;
 }
 
 .wrapper {
-  transition: all 0.3s;
-  font-family: Tahoma, sans-serif;
+  background-color: transparent;
   height: 460px;
   min-width: 320px;
-  width: 30%; 
+  width: 30%;
   margin: 32px 42px;
   border-radius: 15px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  position: relative;
-  box-shadow: -1px 0px 10px 3px rgba(0,0,0,0.4);
-  border: 2px solid rgb(233, 233, 233);
-  cursor: pointer;
-}
-.wrapper::before {
-  content: '';
-  background-color: rgba(0, 0, 0, 0.25); 
-  position: absolute;
-  display: block;
-  height: 100%;
-  width: 100%;
-}
-.wrapper:hover {
-  transform: scale(1.04);
-  box-shadow: -1px 0px 20px 7px rgba(0,0,0,0.55);
+
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 
 .inner {
-  font-size: 35px;
-  color: white;
+  position: relative;
+  width: 100%;
+  height: 100%;
   text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  transition: transform 0.4s ease-out;
+  transform-style: preserve-3d;
 }
 
-.country,
-.capital {
+.wrapper:hover .inner {
+  transform: rotateY(180deg);
+}
+
+.front, .back {
   position: absolute;
   width: 100%;
-}
-.country {
-  top: 40px;
-}
-.capital {
-  bottom: 40px;
+  height: 100%;
+
+  font-family: Tahoma, sans-serif;
+  border-radius: 15px;
+  box-shadow: -1px 0px 10px 3px rgba(0,0,0,.2);
+  border: 2px solid rgb(233, 233, 233);
+  backface-visibility: hidden;
 }
 
-.location {
-  padding: 10px 3px;
-  background-color: rgba(0, 0, 0, 0.8);
+.front {
+  background-color: #bbb;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-size: 35px;
+  text-transform: uppercase;
+  color: black;
+}
+
+.back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(46, 23, 15, 0.753);
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.link {
+  color: rgba(127, 255, 212, 0.562);
+  text-decoration: none;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.link:hover {
+  color: aquamarine;
+  transform: scale(1.02);
 }
 
 @media (max-width: 1024px) {
