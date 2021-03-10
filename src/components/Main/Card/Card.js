@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Card = ({ imgUrl, country, capital }) => {
   return (
-    <Link to='/test'> 
+    <Link to='/country'> 
       <div 
         className={s.wrapper}
         style={{ backgroundImage: `url(${imgUrl})` }}

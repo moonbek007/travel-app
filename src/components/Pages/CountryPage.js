@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const CountryPage = () => {
   return (
-    <Link to='/main'> 
+    <Link to='/'> 
       <h1 style={{ backgroundColor: 'green' }}>
         Test. Click me to retrun to main
       </h1>
