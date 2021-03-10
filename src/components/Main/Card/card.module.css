@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+.outside_wrap {
+  margin: 32px 42px;
+}
+
 .wrapper {
   background-color: transparent;
   height: 460px;
@@ -10,8 +14,7 @@
   width: 30%;
   margin: 32px 42px;
   border-radius: 15px;
-
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  perspective: 1000px;
 }
 
 .inner {
@@ -71,7 +74,7 @@
 }
 
 @media (max-width: 1024px) {
-  .wrapper {
+  .outside_wrap {
     margin: 16px 20px;
   }
 }
@@ -79,5 +82,8 @@
 @media (max-width: 480px) {
   .wrapper {
     min-width: 280px;
+  }
+  .outside_wrap {
+    margin: 16px 0;
   }
 }
