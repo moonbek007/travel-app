@@ -1,0 +1,38 @@
+.countryInfo {
+  height: 100%;
+  margin: 0 50px;
+  border-radius: 20px;
+  margin-top: 20px;
+  background-color: rgb(31, 215, 221);
+  min-height: 100%;
+}
+.mainPhoto {
+  margin: 10px;
+  text-align: left;
+  line-height: 25px;
+  letter-spacing: 2px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.mainPhoto h3 {
+  text-align: center;
+  margin-bottom: -5px;
+}
+.mainPhoto img {
+  border-radius: 3%;
+  background-color: none;
+  margin: 10px 10px 5px 0px;
+  float: left;
+}
+.mainPhoto h3 {
+  padding-top: 5px;
+}
+
+@media (max-width: 600px) {
+  .mainPhoto img {
+    width: 100%;
+  }
+  .mainPhoto {
+    font-size: 12px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+}
