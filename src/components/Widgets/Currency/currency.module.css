@@ -1,0 +1,9 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.item {
+  margin: 0 7px;
+} 
