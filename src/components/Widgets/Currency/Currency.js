@@ -38,9 +38,9 @@ const Currency = () => {
 
   useEffect(() => {
     promise.then(
-      result => convertRates(),
+      () => convertRates(),
       error => console.log(error)
-    )
+    )// eslint-disable-next-line
   }, [])
 
   return (
