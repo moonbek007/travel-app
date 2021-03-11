@@ -7,6 +7,8 @@ import Widgets from "../Widgets/Widgets";
 import MapWidget from "./map/Map";
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
+import "video-react/dist/video-react.css";
+import { Player } from "video-react";
 const images = [
   {
     original:
@@ -27,7 +29,6 @@ const CountryPage = () => {
       <div className={s.main}>
         <Widgets />
         <ShortInfo />
-        <div className={s.photoBox}>Photogallery</div>
         <div className={s.mapBox}>
           <div className={s.map}>
             <MapWidget />
@@ -40,6 +41,17 @@ const CountryPage = () => {
           showIndex={true}
           thumbnailPosition={"bottom"}
         />
+        <div
+          style={{
+            width: "80%",
+            margin: "20px auto 20px auto",
+          }}
+        >
+          <Player
+            playsInline
+            src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4"
+          />
+        </div>
       </div>
     </div>
   );
