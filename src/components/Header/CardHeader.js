@@ -7,7 +7,11 @@ import homeIcon from "../../assets/home_icon.svg";
 
 import { Link } from "react-router-dom";
 
-function CardHeader() {
+function CardHeader({ language, dispatch }) {
+  const handleChange = (event) => {
+    event.preventDefault();
+    dispatch({ type: "CHANGE_LANGUAGE", payload: event.target.value });
+  };
   return (
     <header>
       <div className={headerStyles.rowOne}>
@@ -16,7 +20,12 @@ function CardHeader() {
           <Link to="/main">
             <img src={homeIcon} alt="home-icon" />
           </Link>
-          <select name="languages" id="languages" value="EN">
+          <select
+            name="languages"
+            id="languages"
+            value={language}
+            onChange={handleChange}
+          >
             <option value="EN">EN</option>
             <option value="RU">RU</option>
             <option value="NA">NA</option>

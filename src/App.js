@@ -8,13 +8,17 @@ import Main from "./components/Main/Main";
 import Footer from "./components/Footer/Footer";
 import CardHeader from "./components/Header/CardHeader";
 
+import { reducer, defaultState } from "./components/reducer/reducer";
+import { useReducer } from "react";
+
 function App() {
+  const [state, dispatch] = useReducer(reducer, defaultState);
   return (
     <Router>
       <div className="app">
         <Switch>
           <Route path="/country">
-            <CardHeader />
+            <CardHeader language={state.language} dispatch={dispatch} />
             <CountryPage />
           </Route>
           <Route path="/">
