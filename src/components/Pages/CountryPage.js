@@ -4,6 +4,7 @@ import s from "./countryPage.module.css";
 import ShortInfo from "../ShortInfo/ShortInfo";
 
 import Widgets from "../Widgets/Widgets";
+import MapWidget from "./map/Map";
 
 const CountryPage = () => {
   return (
@@ -13,8 +14,12 @@ const CountryPage = () => {
         <ShortInfo />
         <div className={s.photoBox}>Photogalery</div>
         <div className={s.mapBox}>
-          <div className={s.text}>some text</div>
-          <div className={s.map}>MAP</div>
+          <div className={s.map}>
+            <MapWidget />
+          </div>
+          <div className={s.text}>
+            some text
+          </div>
         </div>
       </div>
     </div>
