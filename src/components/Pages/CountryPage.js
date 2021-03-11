@@ -29,7 +29,6 @@ const CountryPage = () => {
       <div className={s.main}>
         <Widgets />
         <ShortInfo />
-        <div className={s.photoBox}>Photogallery</div>
         <div className={s.mapBox}>
           <div className={s.map}>
             <MapWidget />
