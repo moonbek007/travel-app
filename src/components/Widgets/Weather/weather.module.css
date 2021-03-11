@@ -1,0 +1,15 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.temperature {
+  font-size: 28px;
+  color: rgb(53, 53, 53);
+  font-weight: 600;
+}
+
+.description {
+  margin-left: 10px;
+}
