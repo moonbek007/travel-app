@@ -9,7 +9,13 @@ import homeIcon from "../../assets/home_icon.svg";
 
 import { Link } from "react-router-dom";
 
+import { useRef, useEffect } from "react";
+
 function MainPageHeader() {
+  const inputRef = useRef(null);
+  useEffect(() => {
+    inputRef.current.focus();
+  }, []);
   return (
     <header>
       <div className={headerStyles.rowOne}>
@@ -34,7 +40,11 @@ function MainPageHeader() {
         </button>
       </div>
       <div className={headerStyles.rowThree}>
-        <input type="text" placeholder="e.g. Italy , e.g. Rome" />
+        <input
+          type="text"
+          placeholder=" e.g. Italy , e.g. Rome"
+          ref={inputRef}
+        />
         <button>
           <img src={searchLogo} alt="search-icon" />
         </button>
