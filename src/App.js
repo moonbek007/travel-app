@@ -6,13 +6,17 @@ import CountryPage from "./components/Pages/CountryPage";
 import MainPageHeader from "./components/Header/MainPageHeader";
 import Main from "./components/Main/Main";
 import Footer from "./components/Footer/Footer";
+import CardHeader from "./components/Header/CardHeader";
 
 function App() {
   return (
     <Router>
       <div className="app">
         <Switch>
-          <Route path="/country" component={CountryPage} />
+          <Route path="/country">
+            <CardHeader />
+            <CountryPage />
+          </Route>
           <Route path="/">
             <MainPageHeader />
             <Main />

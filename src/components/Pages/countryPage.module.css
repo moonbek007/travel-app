@@ -1,17 +1,17 @@
 html {
-	background-color: #f7f7f7;
+  background-color: #f7f7f7;
 }
 
 h1 {
-	margin: 0;
+  margin: 0;
 }
 
 .main {
-	font-family: 'Open Sans', sans-serif;
-	font-size: 13pt;
-	color: #696969;
-	font-weight: 300;
-	line-height: 2.25em;
+  font-family: "Open Sans", sans-serif;
+  font-size: 13pt;
+  color: #696969;
+  font-weight: 300;
+  line-height: 2.25em;
 }
 
 .widget, .photoBox, .countryInfo, .mapBox {
@@ -28,13 +28,8 @@ h1 {
 	justify-content: space-between;
 	flex-wrap: wrap;
 }
-
 .photoBox {
-	background-color: blueviolet;
-}
-
-.countryInfo {
-	background-color: rgb(31, 215, 221);
+  background-color: blueviolet;
 }
 
 .mapBox {
@@ -50,8 +45,15 @@ h1 {
 	text-align: center;
 }
 
-.mainPhoto {
-	flex: 1;
+.weather,
+.date,
+.currency,
+.map {
+  flex: 1;
+  background-color: rgb(218, 198, 86);
+  margin: 10px;
+  border-radius: 5px;
+  text-align: center;
 }
 
 .info, .map  {
