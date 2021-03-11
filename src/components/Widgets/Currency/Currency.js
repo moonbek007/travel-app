@@ -44,7 +44,7 @@ const Currency = () => {
   useEffect(() => {
     promise.then(
       result => convertRates(),
-      error => alert(error)
+      error => console.log(error)
     )
   }, [])
 
