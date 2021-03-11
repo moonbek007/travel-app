@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import s from "./weather.module.css";
 import iconLoading from "../../../assets/loading.svg";
 
-const API_KEY = '547d7b79d0be1ee3511f3e1786973061';
-
 // temporary values
-  const lat = 55.74496745165178, lon = 37.59966285843172; 
+  const API_KEY = '547d7b79d0be1ee3511f3e1786973061';
+  const lat = 55.74496745165178; 
+  const lon = 37.59966285843172; 
 // ================
 
 const Weather = () => {
@@ -21,8 +21,8 @@ const Weather = () => {
 
   const getWeather = async () => {
     const response = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?`
-        +`lat=${lat}&lon=${lon}&units=metric&appid=${API_KEY}`
+      `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}`
+        +`&units=metric&appid=${API_KEY}`// process.env.REACT_APP_WEATHER_API_KEY
     );
     const data = await response.json();
     if (data.cod >= 400 || !data) {
