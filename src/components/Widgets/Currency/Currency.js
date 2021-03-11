@@ -9,7 +9,6 @@ import { apiService } from '../../../services/api.service'
 const fx = require('./money.js')
 
 const Currency = () => {
-
   const [ USDrate, SetUSDRate ] = useState(1);
   const [ EURrate, SetEURRate ] = useState(2);
   const [ RUBrate, SetRUBRate ] = useState(3);
@@ -17,10 +16,8 @@ const Currency = () => {
           SetCurrentCountryRate] = useState(4);
 
   function convertRates() {
-
     fx.settings = { from: "USD", to: "RUB" };
-    console.log(fx.convert(1));
-
+    SetCurrentCountryRate(fx.convert(1).toFixed(2));
   }
 
   async function getRates() {
@@ -32,8 +29,6 @@ const Currency = () => {
     
     fx.rates = response.rates;
     fx.base = response.base;
-
-    //console.log(fx.rates, fx.base)
   }
 
   const promise = new Promise((resolve, reject) => {
@@ -48,24 +43,20 @@ const Currency = () => {
     )
   }, [])
 
-
   return (
     <div className={s.currency}>
-        <h4>
-          currency
-        </h4>
         <div className={s['rates-block']}>
-          <div className={s['usd']}>
+          <div className={s.usd}>
             USD: {USDrate}
           </div>
-          <div className={s['eur']}>
+          <div className={s.eur}>
             EUR: {EURrate}
           </div>
-          <div className={s['rub']}>
+          <div className={s.rub}>
             RUB: {RUBrate}
           </div>
-          <div className={s['usd']}>
-            currentCountry: {currentCountryRate}
+          <div className={s['country-currency']}>
+            cC: {currentCountryRate}
           </div>
         </div>
     </div>
