@@ -9,13 +9,21 @@ import homeIcon from "../../assets/home_icon.svg";
 
 import { Link } from "react-router-dom";
 
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useContext } from "react";
+import TravelAppContext from "../context/context";
+import {
+  handleLanguageChange,
+  handleSearchTextChange,
+} from "../handlers/handlers";
 
 function MainPageHeader() {
   const inputRef = useRef(null);
   useEffect(() => {
     inputRef.current.focus();
   }, []);
+
+  const { searchText, language, dispatch } = useContext(TravelAppContext);
+
   return (
     <header>
       <div className={headerStyles.rowOne}>
@@ -24,10 +32,17 @@ function MainPageHeader() {
           <Link to="/main">
             <img src={homeIcon} alt="home-icon" />
           </Link>
-          <select name="languages" id="languages" value="EN">
+          <select
+            name="languages"
+            id="languages"
+            value={language}
+            onChange={(event) => {
+              handleLanguageChange(event, dispatch);
+            }}
+          >
             <option value="EN">EN</option>
-            <option value="RU">RU</option>
-            <option value="NA">NA</option>
+            <option value="РУС">РУС</option>
+            <option value="O'Z">O'Z</option>
           </select>
         </div>
       </div>
@@ -42,8 +57,18 @@ function MainPageHeader() {
       <div className={headerStyles.rowThree}>
         <input
           type="text"
-          placeholder=" e.g. Italy , e.g. Rome"
+          placeholder={`${
+            language === "EN"
+              ? " e.g. Italy , e.g. Rome"
+              : language === "РУС"
+              ? "прим. Италия , прим. Рим"
+              : "misol Italiya , misol Rim"
+          }`}
           ref={inputRef}
+          value={searchText}
+          onChange={(event) => {
+            handleSearchTextChange(event, dispatch);
+          }}
         />
         <button>
           <img src={searchLogo} alt="search-icon" />

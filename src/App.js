@@ -10,25 +10,27 @@ import CardHeader from "./components/Header/CardHeader";
 
 import { reducer, defaultState } from "./components/reducer/reducer";
 import { useReducer } from "react";
-
+import TravelAppContext from "./components/context/context";
 function App() {
   const [state, dispatch] = useReducer(reducer, defaultState);
   return (
-    <Router>
-      <div className="app">
-        <Switch>
-          <Route path="/country">
-            <CardHeader language={state.language} dispatch={dispatch} />
-            <CountryPage />
-          </Route>
-          <Route path="/">
-            <MainPageHeader />
-            <Main />
-          </Route>
-        </Switch>
-        <Footer />
-      </div>
-    </Router>
+    <TravelAppContext.Provider value={{ ...state, dispatch }}>
+      <Router>
+        <div className="app">
+          <Switch>
+            <Route path="/country">
+              <CardHeader />
+              <CountryPage />
+            </Route>
+            <Route path="/">
+              <MainPageHeader />
+              <Main />
+            </Route>
+          </Switch>
+          <Footer />
+        </div>
+      </Router>
+    </TravelAppContext.Provider>
   );
 }
 

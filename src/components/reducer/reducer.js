@@ -1,3 +1,5 @@
+import { countries } from "../data/data";
+
 export const reducer = (state, action) => {
   switch (action.type) {
     case "CHANGE_LANGUAGE":
@@ -13,4 +15,5 @@ export const reducer = (state, action) => {
 export const defaultState = {
   language: "EN",
   searchText: "",
+  countries,
 };

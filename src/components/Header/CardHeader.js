@@ -7,11 +7,13 @@ import homeIcon from "../../assets/home_icon.svg";
 
 import { Link } from "react-router-dom";
 
-function CardHeader({ language, dispatch }) {
-  const handleChange = (event) => {
-    event.preventDefault();
-    dispatch({ type: "CHANGE_LANGUAGE", payload: event.target.value });
-  };
+import { useContext } from "react";
+import TravelAppContext from "../context/context";
+import { handleLanguageChange } from "../handlers/handlers";
+
+function CardHeader() {
+  const { language, dispatch } = useContext(TravelAppContext);
+
   return (
     <header>
       <div className={headerStyles.rowOne}>
@@ -24,10 +26,10 @@ function CardHeader({ language, dispatch }) {
             name="languages"
             id="languages"
             value={language}
-            onChange={handleChange}
+            onChange={(event) => handleLanguageChange(event, dispatch)}
           >
             <option value="EN">EN</option>
-            <option value="RU">RU</option>
+            <option value="РУС">РУС</option>
             <option value="NA">NA</option>
           </select>
         </div>

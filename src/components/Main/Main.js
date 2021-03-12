@@ -2,38 +2,49 @@ import React from "react";
 import Card from "./Card/Card";
 import s from "./main.module.css";
 
-// just data emulation
-import imgUrl from "../../tmp-data/australia.jpg";
-const dataEmulation = [];
-for (let i = 0; i < 8; i++) {
-  dataEmulation.push({
-    imgUrl,
-    country: `${i+1}Countryyyy`,
-    capital: `${i+1}Capital`, 
-  });
-}
-// ---/just data emulation
+import TravelAppContext from "../context/context";
 
 const Main = () => {
-
+  const { countries, language } = React.useContext(TravelAppContext);
   const addCard = () => {
-    return dataEmulation.map((data, idx) => {
-      return (
-        <Card
-          imgUrl={data.imgUrl}
-          country={data.country}
-          capital={data.capital}
-          key={idx}
-        />
-      );
+    return countries.map((data, idx) => {
+      switch (language) {
+        case "EN":
+          return (
+            <Card
+              imgUrl={data.imgURL}
+              country={data.countryEN}
+              capital={data.capitalEN}
+              key={idx}
+            />
+          );
+        case "РУС":
+          return (
+            <Card
+              imgUrl={data.imgURL}
+              country={data.countryRU}
+              capital={data.capitalRU}
+              key={idx}
+            />
+          );
+        case "O'Z":
+          return (
+            <Card
+              imgUrl={data.imgURL}
+              country={data.countryUZ}
+              capital={data.capitalUZ}
+              key={idx}
+            />
+          );
+        default:
+          break;
+      }
     });
   };
-  
+
   return (
     <main>
-      <div className={s.cards_container}>
-        {addCard()}
-      </div>
+      <div className={s.cards_container}>{addCard()}</div>
     </main>
   );
 };
