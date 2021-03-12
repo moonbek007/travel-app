@@ -25,6 +25,7 @@ const Card = ({ imgUrl, country, capital }) => {
             className={s.link}
             onClick={() => {
               dispatch({ type: "SET_COUNTRY_TO_DISPLAY", payload: country });
+              window.scrollTo(0, 0);
             }}
           >
             <h2>{`Read more about ${country}!`}</h2>
