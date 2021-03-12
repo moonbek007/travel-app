@@ -20,6 +20,8 @@ export const reducer = (state, action) => {
         }
       });
       return { ...state, countries: newCountries };
+    case "SET_COUNTRY_TO_DISPLAY":
+      return { ...state, countryToDisplay: action.payload };
     default:
       break;
   }
@@ -30,4 +32,5 @@ export const defaultState = {
   language: "EN",
   searchText: "",
   countries,
+  countryToDisplay: "Switzerland",
 };
