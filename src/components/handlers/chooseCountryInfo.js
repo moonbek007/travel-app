@@ -9,6 +9,7 @@ import {
   italy,
 } from "../Pages/countryInfo/countryInfo";
 const chooseCountryInfo = (currentCountry, currentLanguage) => {
+  console.log(currentCountry, currentLanguage);
   switch (currentLanguage) {
     case "EN":
       switch (currentCountry) {
@@ -43,6 +44,7 @@ const chooseCountryInfo = (currentCountry, currentLanguage) => {
         default:
           break;
       }
+      break;
     case "РУС":
       switch (currentCountry) {
         case "Щвейцария":
@@ -110,6 +112,8 @@ const chooseCountryInfo = (currentCountry, currentLanguage) => {
         default:
           break;
       }
+      break;
+    default:
       break;
   }
 };

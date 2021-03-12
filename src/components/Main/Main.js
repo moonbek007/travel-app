@@ -39,6 +39,7 @@ const Main = () => {
         default:
           break;
       }
+      return data;
     });
   };
 

@@ -21,7 +21,11 @@ const CountryPage = () => {
     <div>
       <div className={s.main}>
         <Widgets />
-        <ShortInfo {...country} language={language} />
+        <ShortInfo
+          {...country}
+          language={language}
+          picture={country.pictures[0].original}
+        />
         <div className={s.mapBox}>
           <div className={s.map}>
             <MapWidget />

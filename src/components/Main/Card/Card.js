@@ -20,12 +20,18 @@ const Card = ({ imgUrl, country, capital }) => {
           </div>
         </div>
         <div className={s.back}>
-          <Link to="/country" className={s.link}>
+          <Link
+            to="/country"
+            className={s.link}
+            onClick={() => {
+              dispatch({ type: "SET_COUNTRY_TO_DISPLAY", payload: country });
+            }}
+          >
             <h2>{`Read more about ${country}!`}</h2>
           </Link>
         </div>
       </div>
-      <div className={s.back}>
+      {/* <div className={s.back}>
         <Link
           to="/country"
           className={s.link}
@@ -35,7 +41,7 @@ const Card = ({ imgUrl, country, capital }) => {
         >
           <h2>click on me!</h2>
         </Link>
-      </div>
+      </div> */}
     </div>
   );
 };

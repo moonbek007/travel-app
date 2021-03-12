@@ -18,6 +18,7 @@ export const reducer = (state, action) => {
         } else if (state.language === "O'Z") {
           return regex.test(country.countryUZ) || regex.test(country.capitalUZ);
         }
+        return country;
       });
       return { ...state, countries: newCountries };
     case "SET_COUNTRY_TO_DISPLAY":
