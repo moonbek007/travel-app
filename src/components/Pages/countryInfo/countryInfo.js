@@ -117,6 +117,7 @@ export const poland = {
     { original: warsaw9, thumbnail: warsaw9 },
   ],
   video: "",
+  coordinates: [52.22, 21.01],
 };
 
 export const spain = {
@@ -142,6 +143,7 @@ export const spain = {
     { original: madrid10, thumbnail: madrid10 },
   ],
   video: "",
+  coordinates: [40.419348, -3.700897],
 };
 
 export const italy = {
@@ -170,6 +172,7 @@ export const italy = {
     { original: rome13, thumbnail: rome13 },
   ],
   video: "",
+  coordinates: [41.9, 12.49],
 };
 
 export const belarus = {
@@ -194,6 +197,7 @@ export const belarus = {
     { original: minsk9, thumbnail: minsk9 },
   ],
   video: "",
+  coordinates: [53.9, 27.55],
 };
 
 export const russia = {
@@ -218,6 +222,7 @@ export const russia = {
     { original: moscow9, thumbnail: moscow9 },
   ],
   video: "",
+  coordinates: [55.75, 37.61],
 };
 
 export const uzbekistan = {
@@ -247,6 +252,7 @@ export const uzbekistan = {
     { original: tashkent14, thumbnail: tashkent14 },
   ],
   video: "",
+  coordinates: [41.29, 69.24],
 };
 
 export const usa = {
@@ -276,6 +282,7 @@ export const usa = {
     washington13,
   ],
   video: "",
+  coordinates: [38.907234, -77.02767],
 };
 
 export const switzerland = {
@@ -301,4 +308,5 @@ export const switzerland = {
     { original: zurich10, thumbnail: zurich10 },
   ],
   video: "",
+  coordinates: [47.37, 8.5],
 };

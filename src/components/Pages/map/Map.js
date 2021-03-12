@@ -1,17 +1,16 @@
-import { YMaps, Map } from 'react-yandex-maps';
-import s from './map.module.css'
+import { YMaps, Map } from "react-yandex-maps";
+import s from "./map.module.css";
 
-
-const MapWidget = () => (
-    <div className={s.layer}>
-  <YMaps>
-      <Map 
-      defaultState={{ center: [55.75, 37.57], zoom: 9 }} 
-      height="100%"
-      width="100%"
+const MapWidget = ({ coordinates }) => (
+  <div className={s.layer}>
+    <YMaps>
+      <Map
+        defaultState={{ center: coordinates, zoom: 9 }}
+        height="100%"
+        width="100%"
       />
-  </YMaps>
-    </div>
+    </YMaps>
+  </div>
 );
 
 export default MapWidget;

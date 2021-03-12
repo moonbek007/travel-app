@@ -28,7 +28,7 @@ const CountryPage = () => {
         />
         <div className={s.mapBox}>
           <div className={s.map}>
-            <MapWidget />
+            <MapWidget coordinates={country.coordinates} />
           </div>
           <div className={s.text}>some text</div>
         </div>
