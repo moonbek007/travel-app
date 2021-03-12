@@ -2,6 +2,8 @@ export const reducer = (state, action) => {
   switch (action.type) {
     case "CHANGE_LANGUAGE":
       return { ...state, language: action.payload };
+    case "CHANGE_SEARCH_TEXT":
+      return { ...state, searchText: action.payload };
     default:
       break;
   }
@@ -10,4 +12,5 @@ export const reducer = (state, action) => {
 
 export const defaultState = {
   language: "EN",
+  searchText: "",
 };
