@@ -1,29 +1,25 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import headerStyles from "./header.module.css";
 import leftArrowLogo from "../../assets/left_arrow.svg";
 import rightArrowLogo from "../../assets/right_arrow.svg";
 import searchLogo from "../../assets/search_icon.svg";
 import clearLogo from "../../assets/clear_icon.svg";
 import travelAppLogo from "../../assets/travel_app_logo.png";
-import homeIcon from "../../assets/home_icon.svg";
-
-import { Link } from "react-router-dom";
-
-import { useRef, useEffect } from "react";
+import useParallax from "../../custom-hooks/useParallax";
 
 function MainPageHeader() {
   const inputRef = useRef(null);
+  const currentBgPosition = useParallax();
+
   useEffect(() => {
     inputRef.current.focus();
   }, []);
+
   return (
-    <header>
+    <header style={currentBgPosition}>
       <div className={headerStyles.rowOne}>
         <img src={travelAppLogo} alt="travel-logo" />
         <div>
-          <Link to="/main">
-            <img src={homeIcon} alt="home-icon" />
-          </Link>
           <select name="languages" id="languages" value="EN">
             <option value="EN">EN</option>
             <option value="RU">RU</option>
