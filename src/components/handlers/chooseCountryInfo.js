@@ -42,6 +42,7 @@ const chooseCountryInfo = (currentCountry, currentLanguage) => {
         case "Italy":
           return { ...italy, capital: italy.capitalEN, info: italy.infoEN };
         default:
+          return { ...italy, capital: italy.capitalEN, info: italy.infoEN };
           break;
       }
       break;
@@ -76,6 +77,7 @@ const chooseCountryInfo = (currentCountry, currentLanguage) => {
         case "Италия":
           return { ...italy, capital: italy.capitalRU, info: italy.infoRU };
         default:
+          return { ...italy, capital: italy.capitalRU, info: italy.infoRU };
           break;
       }
       break;
@@ -110,6 +112,7 @@ const chooseCountryInfo = (currentCountry, currentLanguage) => {
         case "Italiya":
           return { ...italy, capital: italy.capitalUZ, info: italy.infoUZ };
         default:
+          return { ...italy, capital: italy.capitalUZ, info: italy.infoUZ };
           break;
       }
       break;

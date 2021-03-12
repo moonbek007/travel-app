@@ -3,7 +3,14 @@ import { countries } from "../data/data";
 export const reducer = (state, action) => {
   switch (action.type) {
     case "CHANGE_LANGUAGE":
-      return { ...state, language: action.payload };
+      if (action.payload === "EN") {
+        return { ...state, language: action.payload, lang: "en" };
+      } else if (action.payload === "РУС") {
+        return { ...state, language: action.payload, lang: "ru" };
+      } else {
+        return { ...state, language: action.payload, lang: "tr" };
+      }
+      break;
     case "CHANGE_SEARCH_TEXT":
       return { ...state, searchText: action.payload };
     case "CLEAR_SEARCH_TEXT":
@@ -31,6 +38,7 @@ export const reducer = (state, action) => {
 
 export const defaultState = {
   language: "EN",
+  lang: "en",
   searchText: "",
   countries,
   countryToDisplay: "Switzerland",
