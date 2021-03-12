@@ -14,12 +14,19 @@ import TravelAppContext from "../context/context";
 import {
   handleLanguageChange,
   handleSearchTextChange,
+  handleSearchTextSubmit,
+  handleSearchTextClear,
 } from "../handlers/handlers";
 
 function MainPageHeader() {
   const inputRef = useRef(null);
   useEffect(() => {
     inputRef.current.focus();
+    inputRef.current.addEventListener("keydown", (event) => {
+      if (event.key === "Enter") {
+        handleSearchTextSubmit(event, dispatch);
+      }
+    });
   }, []);
 
   const { searchText, language, dispatch } = useContext(TravelAppContext);
@@ -70,10 +77,18 @@ function MainPageHeader() {
             handleSearchTextChange(event, dispatch);
           }}
         />
-        <button>
+        <button
+          onClick={(event) => {
+            handleSearchTextSubmit(event, dispatch);
+          }}
+        >
           <img src={searchLogo} alt="search-icon" />
         </button>
-        <button>
+        <button
+          onClick={(event) => {
+            handleSearchTextClear(event, dispatch);
+          }}
+        >
           <img src={clearLogo} alt="clear-icon" />
         </button>
       </div>
