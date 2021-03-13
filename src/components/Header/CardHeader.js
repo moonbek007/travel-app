@@ -7,7 +7,12 @@ import leftArrowLogo from "../../assets/left_arrow.svg";
 import rightArrowLogo from "../../assets/right_arrow.svg";
 import travelAppLogo from "../../assets/travel_app_logo.png";
 
+import { useContext } from "react";
+import TravelAppContext from "../context/context";
+import { handleLanguageChange } from "../handlers/handlers";
+
 function CardHeader() {
+  const { language, dispatch } = useContext(TravelAppContext);
   const currentBgPosition = useParallax();
 
   return (
@@ -20,10 +25,15 @@ function CardHeader() {
           </Link>
         </span>
         <div>
-          <select name="languages" id="languages" value="EN">
+          <select
+            name="languages"
+            id="languages"
+            value={language}
+            onChange={(event) => handleLanguageChange(event, dispatch)}
+          >
             <option value="EN">EN</option>
-            <option value="RU">RU</option>
-            <option value="NA">NA</option>
+            <option value="РУС">РУС</option>
+            <option value="TÜR">TÜR</option>
           </select>
         </div>
       </div>

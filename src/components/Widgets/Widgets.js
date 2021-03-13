@@ -5,14 +5,14 @@ import Weather from "./Weather/Weather";
 import Date from "./Date/Date";
 import Currency from "./Currency/Currency";
 
-const Widgets = () => {
+const Widgets = ({ coordinates }) => {
   return (
     <div className={s.wrapper}>
       <div className={s.currency}>
         <Currency />
       </div>
       <div className={s.weather}>
-        <Weather />
+        <Weather coordinates={coordinates} />
       </div>
       <div className={s.date}>
         <Date />

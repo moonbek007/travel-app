@@ -9,24 +9,32 @@ import Footer from "./components/Footer/Footer";
 import CardHeader from "./components/Header/CardHeader";
 import ScrollToTop from "./scroll-to-top";
 
+import { reducer } from "./components/reducer/reducer";
+import defaultState from "./components/reducer/reducer";
+import { useReducer } from "react";
+import TravelAppContext from "./components/context/context";
+
 function App() {
+  const [state, dispatch] = useReducer(reducer, defaultState);
   return (
-    <Router>
+    <TravelAppContext.Provider value={{ ...state, dispatch }}>
       <ScrollToTop />
-      <div className="app">
-        <Switch>
-          <Route path="/country">
-            <CardHeader />
-            <CountryPage />
-          </Route>
-          <Route path="/">
-            <MainPageHeader />
-            <Main />
-          </Route>
-        </Switch>
-        <Footer />
-      </div>
-    </Router>
+      <Router>
+        <div className="app">
+          <Switch>
+            <Route path="/country">
+              <CardHeader />
+              <CountryPage />
+            </Route>
+            <Route path="/">
+              <MainPageHeader />
+              <Main />
+            </Route>
+          </Switch>
+          <Footer />
+        </div>
+      </Router>
+    </TravelAppContext.Provider>
   );
 }
 
