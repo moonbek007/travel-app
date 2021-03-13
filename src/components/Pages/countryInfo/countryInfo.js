@@ -216,7 +216,6 @@ export const usa = {
     { original: washington11, thumbnail: washington11 },
     { original: washington12, thumbnail: washington12 },
     { original: washington13, thumbnail: washington13 },
-    washington13,
   ],
   video: "",
   coordinates: [38.907234, -77.02767],

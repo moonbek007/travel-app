@@ -1,37 +1,36 @@
 import React from "react";
 import s from "./date.module.css";
 
-import { timeAPI } from "../../../services/api.service";
+import { localTime } from "../../../services/api.service";
 import TravelAppContext from "../../context/context";
+import { findWeekDay, findMonth } from "../../handlers/dateFunctions";
 
 const Date = () => {
-  const { area, cityTime } = React.useContext(TravelAppContext);
-  const [min, setMin] = React.useState(null);
-  const [hour, setHour] = React.useState(null);
-  const [date, setDate] = React.useState(null);
-
-  React.useEffect(() => {
-    const temporaryAsyncFunction = async () => {
-      const time = await timeAPI.fetchTime(area, cityTime);
-      setMin(await time.datetime.substring(14, 16));
-      setHour(await time.datetime.substring(11, 14));
-      setDate(
-        (await time.datetime.substring(8, 10)) +
-          " " +
-          time.datetime.substring(5, 7) +
-          " " +
-          time.datetime.substring(0, 4)
-      );
-    };
-    temporaryAsyncFunction();
-  }, []);
-
+  const { language, utc } = React.useContext(TravelAppContext);
+  let weekDay = findWeekDay(localTime.getUTCDay(), language);
+  let month = findMonth(localTime.getMonth(), language);
+  let minutes = localTime.getMinutes();
+  let hours = utc + localTime.getUTCHours();
+  console.log(hours);
+  if (hours < 10 && hours >= 0) {
+    hours = "0" + hours.toString();
+  } else if (hours < 0) {
+    hours = 24 + hours;
+    weekDay = findWeekDay(localTime.getUTCDay() - 1, language);
+  } else if (hours >= 24) {
+    hours = hours - 24;
+    weekDay = findWeekDay(localTime.getUTCDay() + 1, language);
+  }
+  const year = localTime.getUTCDay();
+  console.log(year);
   return (
     <div className={s.wrapper}>
-      <span>{hour}</span>
-      {/* <span>:</span> */}
-      <span>{min}</span>
-      <span className={s.date}>{date}</span>
+      <span>{hours}</span>
+      <span>:</span>
+      <span>{minutes}</span>
+      {/* <span className={s.date}>{date}</span> */}
+      <span>{weekDay}</span>
+      <span>{month}</span>
     </div>
   );
 };

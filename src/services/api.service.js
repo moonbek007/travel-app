@@ -36,8 +36,8 @@ export const apiService = new ApiService(
   "https://openexchangerates.org/api/latest.json?app_id=7ac3c53d982242239ff824ac7653218c"
 );
 
-export const temp = new ApiService(
+export const currencyAPI = new ApiService(
   "https://api.exchangeratesapi.io/latest?base=RUB"
 );
 
-export const timeAPI = new ApiService("http://worldtimeapi.org/api/timezone");
+export const localTime = new Date();
