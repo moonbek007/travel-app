@@ -9,11 +9,11 @@ import prague from "../../assets/capitals/prague.jpg";
 const countries = [
   {
     imgURL: washington,
-    countryEN: "U.S.A.",
+    countryEN: "USA",
     capitalEN: "Washington DC",
-    countryRU: "С.Ш.А.",
+    countryRU: "США",
     capitalRU: "Вашингтон",
-    countryTR: "A.B.D.",
+    countryTR: "ABD",
     capitalTR: "Vaşington",
     area: "America",
     cityTime: "New_York",

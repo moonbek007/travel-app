@@ -75,6 +75,7 @@ function MainPageHeader() {
           value={searchText}
           onChange={(event) => {
             handleSearchTextChange(event, dispatch);
+            handleSearchTextSubmit(event, dispatch);
           }}
         />
         <button

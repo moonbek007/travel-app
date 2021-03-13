@@ -34,7 +34,7 @@ const chooseCountryInfo = (currentCountry) => {
         area: poland.area,
         cityTime: poland.cityTime,
       };
-    case "U.S.A.":
+    case "USA":
       return {
         ...usa,
         capital: usa.capitalEN,
@@ -98,7 +98,7 @@ const chooseCountryInfo = (currentCountry) => {
         area: poland.area,
         cityTime: poland.cityTime,
       };
-    case "С.Ш.А.":
+    case "США":
       return {
         ...usa,
         capital: usa.capitalRU,
@@ -162,7 +162,7 @@ const chooseCountryInfo = (currentCountry) => {
         area: poland.area,
         cityTime: poland.cityTime,
       };
-    case "A.B.D.":
+    case "ABD":
       return {
         ...usa,
         capital: usa.capitalTR,
