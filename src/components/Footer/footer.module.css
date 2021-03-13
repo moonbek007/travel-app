@@ -1,8 +1,8 @@
 footer {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 14px;
-  height: 60px;
-  background-color: rgb(169, 175, 175);
+  height: 15vh;
+  background-color: rgb(182, 169, 178);
   margin: auto;
   display: flex;
   justify-content: space-around;

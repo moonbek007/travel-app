@@ -1,14 +1,14 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
+import useParallax from "../../custom-hooks/useParallax";
 import headerStyles from "./header.module.css";
+
 import leftArrowLogo from "../../assets/left_arrow.svg";
 import rightArrowLogo from "../../assets/right_arrow.svg";
 import searchLogo from "../../assets/search_icon.svg";
 import clearLogo from "../../assets/clear_icon.svg";
 import travelAppLogo from "../../assets/travel_app_logo.png";
-import homeIcon from "../../assets/home_icon.svg";
 
 import { Link } from "react-router-dom";
-
 import { useRef, useEffect, useContext } from "react";
 import TravelAppContext from "../context/context";
 import {
@@ -20,6 +20,9 @@ import {
 
 function MainPageHeader() {
   const inputRef = useRef(null);
+  const currentBgPosition = useParallax();
+  const { searchText, language, dispatch } = useContext(TravelAppContext);
+
   useEffect(() => {
     inputRef.current.focus();
     inputRef.current.addEventListener("keydown", (event) => {
@@ -29,14 +32,12 @@ function MainPageHeader() {
     });
   }, []);
 
-  const { searchText, language, dispatch } = useContext(TravelAppContext);
-
   return (
-    <header>
+    <header style={currentBgPosition}>
       <div className={headerStyles.rowOne}>
         <img src={travelAppLogo} alt="travel-logo" />
         <div>
-          <Link to="/main">
+          <Link to="/">
             <img src={homeIcon} alt="home-icon" />
           </Link>
           <select

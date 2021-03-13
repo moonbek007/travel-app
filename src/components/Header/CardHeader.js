@@ -1,11 +1,11 @@
 import React from "react";
-import headerStyles from "./header.module.css";
+import s from "./header.module.css";
+import { Link } from "react-router-dom";
+import useParallax from "../../custom-hooks/useParallax";
+
 import leftArrowLogo from "../../assets/left_arrow.svg";
 import rightArrowLogo from "../../assets/right_arrow.svg";
 import travelAppLogo from "../../assets/travel_app_logo.png";
-import homeIcon from "../../assets/home_icon.svg";
-
-import { Link } from "react-router-dom";
 
 import { useContext } from "react";
 import TravelAppContext from "../context/context";
@@ -13,15 +13,18 @@ import { handleLanguageChange } from "../handlers/handlers";
 
 function CardHeader() {
   const { language, dispatch } = useContext(TravelAppContext);
+  const currentBgPosition = useParallax();
 
   return (
-    <header>
-      <div className={headerStyles.rowOne}>
-        <img src={travelAppLogo} alt="travel-logo" />
-        <div>
-          <Link to="/main">
-            <img src={homeIcon} alt="home-icon" />
+    <header style={currentBgPosition}>
+
+      <div className={s.rowOne}>
+        <span>
+          <Link to='/'>
+            <img src={travelAppLogo} alt="travel-logo" />
           </Link>
+        </span>
+        <div>
           <select
             name="languages"
             id="languages"
@@ -34,7 +37,8 @@ function CardHeader() {
           </select>
         </div>
       </div>
-      <div className={headerStyles.rowTwo}>
+
+      <div className={s.rowTwo}>
         <button>
           <img src={leftArrowLogo} alt="left-arrow-logo" />
         </button>
@@ -42,7 +46,8 @@ function CardHeader() {
           <img src={rightArrowLogo} alt="right-arrow-logo" />
         </button>
       </div>
-      <div className={headerStyles.rowThree}></div>
+      
+      <div className={s.rowThree}></div>
     </header>
   );
 }
