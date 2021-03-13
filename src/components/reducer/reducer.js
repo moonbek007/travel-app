@@ -22,8 +22,8 @@ export const reducer = (state, action) => {
           return regex.test(country.countryEN) || regex.test(country.capitalEN);
         } else if (state.language === "РУС") {
           return regex.test(country.countryRU) || regex.test(country.capitalRU);
-        } else if (state.language === "O'Z") {
-          return regex.test(country.countryUZ) || regex.test(country.capitalUZ);
+        } else if (state.language === "TÜR") {
+          return regex.test(country.countryTR) || regex.test(country.capitalTR);
         }
         return country;
       });

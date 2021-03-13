@@ -81,42 +81,43 @@ const chooseCountryInfo = (currentCountry, currentLanguage) => {
           break;
       }
       break;
-    case "O'Z":
+    case "TÜR":
       switch (currentCountry) {
         case "Sveysariya":
           return {
             ...switzerland,
-            capital: switzerland.capitalUZ,
-            info: switzerland.infoUZ,
+            capital: switzerland.capitalTR,
+            info: switzerland.infoTR,
           };
         case "Belarus":
           return {
             ...belarus,
-            capital: belarus.capitalUZ,
-            info: belarus.infoUZ,
+            capital: belarus.capitalTR,
+            info: belarus.infoTR,
           };
         case "Polsha":
-          return { ...poland, capital: poland.capitalUZ, info: poland.infoUZ };
+          return { ...poland, capital: poland.capitalTR, info: poland.infoTR };
         case "AQSH":
-          return { ...usa, capital: usa.capitalUZ, info: usa.infoUZ };
+          return { ...usa, capital: usa.capitalTR, info: usa.infoTR };
         case "O'zbekiston":
           return {
             ...uzbekistan,
-            capital: uzbekistan.capitalUZ,
-            info: uzbekistan.infoUZ,
+            capital: uzbekistan.capitalTR,
+            info: uzbekistan.infoTR,
           };
         case "Rossiya":
-          return { ...russia, capital: russia.capitalUZ, info: russia.infoUZ };
+          return { ...russia, capital: russia.capitalTR, info: russia.infoTR };
         case "Ispaniya":
-          return { ...spain, capital: spain.capitalUZ, info: spain.infoUZ };
+          return { ...spain, capital: spain.capitalTR, info: spain.infoTR };
         case "Italiya":
-          return { ...italy, capital: italy.capitalUZ, info: italy.infoUZ };
+          return { ...italy, capital: italy.capitalTR, info: italy.infoTR };
         default:
-          return { ...italy, capital: italy.capitalUZ, info: italy.infoUZ };
+          return { ...italy, capital: italy.capitalTR, info: italy.infoTR };
           break;
       }
       break;
     default:
+      return { ...italy, capital: italy.capitalTR, info: italy.infoTR };
       break;
   }
 };

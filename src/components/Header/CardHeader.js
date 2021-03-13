@@ -30,7 +30,7 @@ function CardHeader() {
           >
             <option value="EN">EN</option>
             <option value="РУС">РУС</option>
-            <option value="O'Z">O'Z</option>
+            <option value="TÜR">TÜR</option>
           </select>
         </div>
       </div>

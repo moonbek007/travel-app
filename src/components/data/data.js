@@ -9,12 +9,12 @@ import madrid from "../../assets/capitals/madrid.jpg";
 const countries = [
   {
     imgURL: washington,
-    countryEN: "USA",
+    countryEN: "U.S.A.",
     capitalEN: "Washington DC",
-    countryRU: "США",
+    countryRU: "С.Ш.А.",
     capitalRU: "Вашингтон",
-    countryUZ: "AQSH",
-    capitalUZ: "Vashington",
+    countryTR: "A.B.D.",
+    capitalTR: "Vaşington",
   },
   {
     imgURL: zurich,
@@ -22,8 +22,8 @@ const countries = [
     capitalEN: "Zurich",
     countryRU: "Швейцария",
     capitalRU: "Цюрих",
-    countryUZ: "Shveysariya",
-    capitalUZ: "Syurix",
+    countryTR: "İsviçre",
+    capitalTR: "Zürih",
   },
   {
     imgURL: rome,
@@ -31,8 +31,8 @@ const countries = [
     capitalEN: "Rome",
     countryRU: "Италия",
     capitalRU: "Рим",
-    countryUZ: "Italiya",
-    capitalUZ: "Rim",
+    countryTR: "İtalya",
+    capitalTR: "Roma",
   },
   {
     imgURL: madrid,
@@ -40,8 +40,8 @@ const countries = [
     capitalEN: "Madrid",
     countryRU: "Испания",
     capitalRU: "Мадрид",
-    countryUZ: "Ispaniya",
-    capitalUZ: "Madrid",
+    countryTR: "İspanya",
+    capitalTR: "Madrid",
   },
   {
     imgURL: moscow,
@@ -49,8 +49,8 @@ const countries = [
     capitalEN: "Moscow",
     countryRU: "Россия",
     capitalRU: "Москва",
-    countryUZ: "Rossiya",
-    capitalUZ: "Moskva",
+    countryTR: "Rusya",
+    capitalTR: "Moskova",
   },
   {
     imgURL: warsaw,
@@ -58,8 +58,8 @@ const countries = [
     capitalEN: "Warsaw",
     countryRU: "Польша",
     capitalRU: "Варшава",
-    countryUZ: "Polsha",
-    capitalUZ: "Varshava",
+    countryTR: "Polonya",
+    capitalTR: "Varşova",
   },
   {
     imgURL: minsk,
@@ -67,8 +67,8 @@ const countries = [
     capitalEN: "Minsk",
     countryRU: "Беларусь",
     capitalRU: "Минск",
-    countryUZ: "Belarus",
-    capitalUZ: "Minsk",
+    countryTR: "Belarus",
+    capitalTR: "Minsk",
   },
   {
     imgURL: tashkent,
@@ -76,8 +76,8 @@ const countries = [
     capitalEN: "Tashkent",
     countryRU: "Узбекистан",
     capitalRU: "Ташкент",
-    countryUZ: "O'zbekiston",
-    capitalUZ: "Toshkent",
+    countryTR: "Özbekistan",
+    capitalTR: "Taşkent",
   },
 ];
 export { countries };

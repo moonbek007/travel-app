@@ -10,7 +10,8 @@ function ShortInfo({ capital, info, picture, language }) {
             ? `About ${capital}.`
             : language === "РУС"
             ? `Про ${capital}.`
-            : `${capital} haqida.`}
+            : `${capital} 
+hakkında.`}
         </h3>
         <p>{info}</p>
       </div>

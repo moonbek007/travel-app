@@ -11,15 +11,18 @@ const API_KEY = "547d7b79d0be1ee3511f3e1786973061";
 
 const Weather = ({ coordinates }) => {
   const [weather, setWeather] = useState(null);
+
   const lat = coordinates[0];
   const lon = coordinates[1];
+
   const { lang } = useContext(TravelAppContext);
+
   useEffect(() => {
     getWeather();
     const intervalId = setInterval(getWeather, 300000);
     return () => clearInterval(intervalId);
     // eslint-disable-next-line
-  }, []);
+  }, [lang]);
 
   const getWeather = async () => {
     const response = await fetch(

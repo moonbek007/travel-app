@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import TravelAppContext from "../../context/context";
 
 const Card = ({ imgUrl, country, capital }) => {
-  const { dispatch } = React.useContext(TravelAppContext);
+  const { dispatch, language } = React.useContext(TravelAppContext);
   return (
     <div className={s.wrapper}>
       <div className={s.inner}>
@@ -28,7 +28,14 @@ const Card = ({ imgUrl, country, capital }) => {
               window.scrollTo(0, 0);
             }}
           >
-            <h2>{`Read more about ${country}!`}</h2>
+            <h2>{`${
+              language === "EN"
+                ? `Read more about ${country}!`
+                : language === "РУС"
+                ? `Читать больше про ${country}`
+                : `${country} 
+hakkında daha fazlasını oku`
+            }`}</h2>
           </Link>
         </div>
       </div>

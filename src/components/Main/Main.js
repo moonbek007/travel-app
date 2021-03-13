@@ -27,16 +27,24 @@ const Main = () => {
               key={idx}
             />
           );
-        case "O'Z":
+        case "TÜR":
           return (
             <Card
               imgUrl={data.imgURL}
-              country={data.countryUZ}
-              capital={data.capitalUZ}
+              country={data.countryTR}
+              capital={data.capitalTR}
               key={idx}
             />
           );
         default:
+          return (
+            <Card
+              imgUrl={data.imgURL}
+              country={data.countryEN}
+              capital={data.capitalEN}
+              key={idx}
+            />
+          );
           break;
       }
       return data;

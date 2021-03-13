@@ -49,7 +49,7 @@ function MainPageHeader() {
           >
             <option value="EN">EN</option>
             <option value="РУС">РУС</option>
-            <option value="O'Z">O'Z</option>
+            <option value="TÜR">TÜR</option>
           </select>
         </div>
       </div>
@@ -69,7 +69,7 @@ function MainPageHeader() {
               ? " e.g. Italy , e.g. Rome"
               : language === "РУС"
               ? "прим. Италия , прим. Рим"
-              : "misol Italiya , misol Rim"
+              : "örneğin İtalya , örneğin Roma"
           }`}
           ref={inputRef}
           value={searchText}
