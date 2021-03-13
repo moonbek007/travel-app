@@ -28,7 +28,23 @@ export const reducer = (state, action) => {
       });
       return { ...state, countries: newCountries };
     case "SET_COUNTRY_TO_DISPLAY":
-      return { ...state, countryToDisplay: action.payload };
+      let temporaryCountry = {};
+      for (let i = 0; i < countries.length; i++) {
+        if (
+          countries[i].countryEN === action.payload ||
+          countries[i].countryRU === action.payload ||
+          countries[i].countryTR === action.payload
+        ) {
+          temporaryCountry = countries[i];
+          break;
+        }
+      }
+      return {
+        ...state,
+        countryToDisplay: action.payload,
+        area: temporaryCountry.area,
+        cityTime: temporaryCountry.cityTime,
+      };
     default:
       break;
   }
@@ -41,4 +57,6 @@ export const defaultState = {
   searchText: "",
   countries,
   countryToDisplay: "Switzerland",
+  area: "",
+  cityTime: "",
 };

@@ -15,6 +15,8 @@ const countries = [
     capitalRU: "Вашингтон",
     countryTR: "A.B.D.",
     capitalTR: "Vaşington",
+    area: "America",
+    cityTime: "New_York",
   },
   {
     imgURL: zurich,
@@ -24,6 +26,8 @@ const countries = [
     capitalRU: "Цюрих",
     countryTR: "İsviçre",
     capitalTR: "Zürih",
+    area: "Europe",
+    cityTime: "Zurich",
   },
   {
     imgURL: rome,
@@ -33,6 +37,8 @@ const countries = [
     capitalRU: "Рим",
     countryTR: "İtalya",
     capitalTR: "Roma",
+    area: "Europe",
+    cityTime: "Rome",
   },
   {
     imgURL: madrid,
@@ -42,6 +48,8 @@ const countries = [
     capitalRU: "Мадрид",
     countryTR: "İspanya",
     capitalTR: "Madrid",
+    area: "Europe",
+    cityTime: "Madrid",
   },
   {
     imgURL: moscow,
@@ -51,6 +59,8 @@ const countries = [
     capitalRU: "Москва",
     countryTR: "Rusya",
     capitalTR: "Moskova",
+    area: "Europe",
+    cityTime: "Moscow",
   },
   {
     imgURL: warsaw,
@@ -60,6 +70,8 @@ const countries = [
     capitalRU: "Варшава",
     countryTR: "Polonya",
     capitalTR: "Varşova",
+    area: "Europe",
+    cityTime: "Warsaw",
   },
   {
     imgURL: minsk,
@@ -69,6 +81,8 @@ const countries = [
     capitalRU: "Минск",
     countryTR: "Belarus",
     capitalTR: "Minsk",
+    area: "Europe",
+    cityTime: "Minsk",
   },
   {
     imgURL: tashkent,
@@ -78,6 +92,8 @@ const countries = [
     capitalRU: "Ташкент",
     countryTR: "Özbekistan",
     capitalTR: "Taşkent",
+    area: "Asia",
+    cityTime: "Tashkent",
   },
 ];
 export { countries };
