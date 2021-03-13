@@ -8,8 +8,7 @@ import {
   czechia,
   turkey,
 } from "../Pages/countryInfo/countryInfo";
-const chooseCountryInfo = (currentCountry, currentLanguage) => {
-  console.log(currentCountry, currentLanguage);
+const chooseCountryInfo = (currentCountry) => {
   switch (currentCountry) {
     case "Switzerland":
       return {
@@ -75,7 +74,7 @@ const chooseCountryInfo = (currentCountry, currentLanguage) => {
         area: italy.area,
         cityTime: italy.cityTime,
       };
-    case "Щвейцария":
+    case "Швейцария":
       return {
         ...switzerland,
         capital: switzerland.capitalRU,

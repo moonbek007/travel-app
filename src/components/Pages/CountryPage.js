@@ -15,7 +15,9 @@ import chooseCountryInfo from "../handlers/chooseCountryInfo";
 
 const CountryPage = () => {
   const { countryToDisplay, language } = React.useContext(TravelAppContext);
-  let country = chooseCountryInfo(countryToDisplay, language);
+
+  let country = chooseCountryInfo(countryToDisplay);
+
   return (
     <div>
       <div className={s.main}>
