@@ -34,17 +34,6 @@ import rome11 from "../../../assets/rome/rome11.jpg";
 import rome12 from "../../../assets/rome/rome12.jpg";
 import rome13 from "../../../assets/rome/rome13.jpg";
 
-import minsk from "../../../assets/minsk/minsk.jpg";
-import minsk1 from "../../../assets/minsk/minsk1.jpg";
-import minsk2 from "../../../assets/minsk/minsk2.jpg";
-import minsk3 from "../../../assets/minsk/minsk3.jpg";
-import minsk4 from "../../../assets/minsk/minsk4.jpg";
-import minsk5 from "../../../assets/minsk/minsk5.jpg";
-import minsk6 from "../../../assets/minsk/minsk6.jpg";
-import minsk7 from "../../../assets/minsk/minsk7.jpg";
-import minsk8 from "../../../assets/minsk/minsk8.jpg";
-import minsk9 from "../../../assets/minsk/minsk9.jpg";
-
 import moscow1 from "../../../assets/moscow/moscow1.jpg";
 import moscow2 from "../../../assets/moscow/moscow2.jpg";
 import moscow3 from "../../../assets/moscow/moscow3.jpg";
@@ -54,21 +43,6 @@ import moscow6 from "../../../assets/moscow/moscow6.jpg";
 import moscow7 from "../../../assets/moscow/moscow7.jpg";
 import moscow8 from "../../../assets/moscow/moscow8.jpg";
 import moscow9 from "../../../assets/moscow/moscow9.jpg";
-
-import tashkent1 from "../../../assets/tashkent/tashkent1.jpg";
-import tashkent2 from "../../../assets/tashkent/tashkent2.jpg";
-import tashkent3 from "../../../assets/tashkent/tashkent3.jpg";
-import tashkent4 from "../../../assets/tashkent/tashkent4.jpg";
-import tashkent5 from "../../../assets/tashkent/tashkent5.jpg";
-import tashkent6 from "../../../assets/tashkent/tashkent6.jpg";
-import tashkent7 from "../../../assets/tashkent/tashkent7.jpg";
-import tashkent8 from "../../../assets/tashkent/tashkent8.jpg";
-import tashkent9 from "../../../assets/tashkent/tashkent9.jpg";
-import tashkent10 from "../../../assets/tashkent/tashkent10.jpg";
-import tashkent11 from "../../../assets/tashkent/tashkent11.jpg";
-import tashkent12 from "../../../assets/tashkent/tashkent12.jpg";
-import tashkent13 from "../../../assets/tashkent/tashkent13.jpg";
-import tashkent14 from "../../../assets/tashkent/tashkent14.jpg";
 
 import washington1 from "../../../assets/washington/washington1.jpg";
 import washington2 from "../../../assets/washington/washington2.jpg";
@@ -94,6 +68,25 @@ import zurich7 from "../../../assets/zurich/zurich7.jpg";
 import zurich8 from "../../../assets/zurich/zurich8.jpg";
 import zurich9 from "../../../assets/zurich/zurich9.jpg";
 import zurich10 from "../../../assets/zurich/zurich10.jpg";
+
+import prague1 from "../../../assets/prague/prague1.jpg";
+import prague2 from "../../../assets/prague/prague2.jpg";
+import prague3 from "../../../assets/prague/prague3.jpg";
+import prague4 from "../../../assets/prague/prague4.jpg";
+import prague5 from "../../../assets/prague/prague5.jpg";
+import prague6 from "../../../assets/prague/prague6.jpg";
+import prague7 from "../../../assets/prague/prague7.jpg";
+import prague8 from "../../../assets/prague/prague8.jpg";
+import prague9 from "../../../assets/prague/prague9.jpg";
+
+import ankara from "../../../assets/ankara/ankara.jpg";
+import ankara1 from "../../../assets/ankara/ankara1.jpg";
+import ankara2 from "../../../assets/ankara/ankara2.jpg";
+import ankara4 from "../../../assets/ankara/ankara4.jpg";
+import ankara5 from "../../../assets/ankara/ankara5.jpg";
+import ankara6 from "../../../assets/ankara/ankara6.jpg";
+import ankara7 from "../../../assets/ankara/ankara7.jpg";
+import ankara8 from "../../../assets/ankara/ankara8.jpg";
 
 export const poland = {
   capitalEN: "Warsaw",
@@ -175,31 +168,6 @@ export const italy = {
   coordinates: [41.9, 12.49],
 };
 
-export const belarus = {
-  capitalEN: "Minsk",
-  capitalRU: "Минск",
-  capitalTR: "Minsk",
-  infoEN:
-    "Minsk (Belarusian: Мінск/Менск [mʲinsk], Russian: Минск) is the capital and the largest city of Belarus, located on the Svislač and the Niamiha rivers. As the capital, Minsk has a special administrative status in Belarus and is the administrative centre of Minsk Region (voblasć) and Minsk District (rajon). As of January 2018, its population was 1,982,444,[4] (not including suburbs), making Minsk the 11th most populous city in Europe. Minsk is the administrative capital of the Commonwealth of Independent States (CIS) and seat of its Executive Secretary.",
-  infoRU:
-    "Минск (белор. Мінск) — столица Белоруссии, административный центр Минской области и Минского района, в состав которых не входит, поскольку является самостоятельной административно-территориальной единицей с особым (столичным) статусом. Крупнейший транспортный узел, политический, экономический, культурный и научный центр страны. Является ядром Минской агломерации. Десятый по численности населения (без учёта пригородов) город в Европе, пятый — после Москвы, Санкт-Петербурга, Киева, Ташкента на территории бывшего СССР. Город расположен недалеко от географического центра страны и стоит на реке Свислочи. Площадь составляет 348,84 км², население — 2 018 281 человек (по итогам переписи 2019 года)[2] без учёта пригородов. Город-герой.",
-  infoTR: `Minsk (Beyaz Rusça: Мінск; Rusça: Минск), Belarus'un başkentidir. Şehir 305,47 km² alanda kuruludur. 2018 yılındaki nüfusu yaklaşık 1.982.444 kişidir.1990'lı yıllar boyunca, Komünizmin yıkılmasından sonra şehir değişmeye devam etti. Yeni bağımsız ülkenin başkenti olan Minsk, hızla büyük bir kent niteliği kazandı. Kentte elçilikler açıldı ve Sovyet idari binaları hükûmet merkezleri haline geldi. 1990'ların başlarında ve ortalarında, Minsk'te ekonomik kriz belirginleşti ve birçok kalkınma projeleri durduruldu, yüksek işsizlik ve eksik istihdam oluştu. 1990'ların sonundan beri, ulaştırma ve altyapı gelişmeler olmuştur ve bir konut patlaması 2002 yılından beri devam etmektedir. Minsk eteklerinde, konut geliştirme projeleri inşa edilmiştir. Metro hatları uzatılmış ve yol sistemi (Minsk çevreyolu dahil) geliştirilmiştir. 2008 yılı Ocak ayında, şehir hükûmeti kendi resmi web sitesinde çeşitli projeler açıkladı. Bunlar arasında bazı sokakların yenilenmesi ve ana caddeleri, otel inşaatı (Komsomolkye gölü kıyısında ve Saray yakınında) otel ve spor tesislerinden oluşan bir kompleks, potansiyel yabancı yatırımcıların yardımı ile ve şehrin eteklerinde modern bir su parkı inşası ile yüzme havuzu, 2 otel, kule ve bir iş merkezi binası yapılacaktır. 8 Eylül 2015 tarihinde, Minsk şehrinin kuruluşundan bu yana 947. yılını kutladı.`,
-  pictures: [
-    { original: minsk, thumbnail: minsk },
-    { original: minsk1, thumbnail: minsk1 },
-    { original: minsk2, thumbnail: minsk2 },
-    { original: minsk3, thumbnail: minsk3 },
-    { original: minsk4, thumbnail: minsk4 },
-    { original: minsk5, thumbnail: minsk5 },
-    { original: minsk6, thumbnail: minsk6 },
-    { original: minsk7, thumbnail: minsk7 },
-    { original: minsk8, thumbnail: minsk8 },
-    { original: minsk9, thumbnail: minsk9 },
-  ],
-  video: "",
-  coordinates: [53.9, 27.55],
-};
-
 export const russia = {
   capitalEN: "Moscow",
   capitalRU: "Москва",
@@ -222,36 +190,6 @@ export const russia = {
   ],
   video: "",
   coordinates: [55.75, 37.61],
-};
-
-export const uzbekistan = {
-  capitalEN: "Tashkent",
-  capitalRU: "Ташкент",
-  capitalTR: "Taşkent",
-  infoEN:
-    "Tashkent (/tæʃˈkɛnt/, US also /tɑːʃ-/; Russian: Ташкент, tr. Tashkent, IPA: [tɐʂˈkʲent]), or Toshkent (/tɒʃˈkɛnt/; Uzbek: Toshkent/Тошкент/تاشكینت‎, IPA: [tɒʃˈkent]), is the capital and largest city of Uzbekistan, as well as the most populous city in Central Asia, with a population in 2018 of 2,485,900.[3] It is in northeastern Uzbekistan, near the border with Kazakhstan.",
-  infoRU:
-    "Ташке́нт (узб. Toshkent, Тошкент) — столица и крупнейший город Узбекистана, город республиканского подчинения. Крупнейший по численности населения город Средней Азии (2 622 700 человек[4]) центр Ташкентской городской агломерации, важнейший политический, экономический, культурный и научный центр страны, а также авиационный, железнодорожный и автомобильный узел. Расположен на северо-востоке страны, недалеко от границы с Казахстаном.Ташкент — 4-й город в СНГ[5] по численности населения. Является одним из древнейших городов Средней Азии — в 2009 году отмечалось 2200-летие города[6].В Ташкенте находятся государственные органы власти, посольства иностранных государств, штаб-квартиры большинства крупнейших узбекистанских коммерческих организаций и общественных объединений.",
-  infoTR:
-    "Taşkent (Özbekçe: Toshkent) Özbekistan'ın başkenti. Özbekistan'ın doğusunda yer alır.Orta Asya'nın nüfus bakımından en büyük kenti olan Taşkent, eski Sovyet Cumhuriyetleri içinde de Moskova, Sankt-Peterburg ve Kiev'den sonra dördüncü büyük kenttir. 1966 yılında yaşanan yıkıcı depremin ardından kent, büyük ölçüde yeniden inşa edilmiştir.2006 yılı sayımlarına göre şehrin nüfusu 2.700.000'dir.Geniş yolları, yeşil alanları, park-bahçeleri, düzenli yerleşimi, düzenli ve sağlam altyapısı ile kent, Sovyet şehir planlamacılığının en önemli örneklerinden biridir.",
-  pictures: [
-    { original: tashkent1, thumbnail: tashkent1 },
-    { original: tashkent2, thumbnail: tashkent2 },
-    { original: tashkent3, thumbnail: tashkent3 },
-    { original: tashkent4, thumbnail: tashkent4 },
-    { original: tashkent5, thumbnail: tashkent5 },
-    { original: tashkent6, thumbnail: tashkent6 },
-    { original: tashkent7, thumbnail: tashkent7 },
-    { original: tashkent8, thumbnail: tashkent8 },
-    { original: tashkent9, thumbnail: tashkent9 },
-    { original: tashkent10, thumbnail: tashkent10 },
-    { original: tashkent11, thumbnail: tashkent11 },
-    { original: tashkent12, thumbnail: tashkent12 },
-    { original: tashkent13, thumbnail: tashkent13 },
-    { original: tashkent14, thumbnail: tashkent14 },
-  ],
-  video: "",
-  coordinates: [41.29, 69.24],
 };
 
 export const usa = {
@@ -308,4 +246,51 @@ export const switzerland = {
   ],
   video: "",
   coordinates: [47.37, 8.5],
+};
+
+export const czechia = {
+  capitalEN: "Prague",
+  capitalRU: "Прага",
+  capitalTR: "Prag",
+  infoEN:
+    "Prague (/prɑːɡ/; Czech: Praha [ˈpraɦa] (About this soundlisten), German: Prag, Latin: Praga) is the capital and largest city in the Czech Republic, the 13th largest city in the European Union[9] and the historical capital of Bohemia. Situated on the Vltava river, Prague is home to about 1.3 million people, while its metropolitan area is estimated to have a population of 2.7 million.[4] The city has a temperate oceanic climate, with relatively warm summers and chilly winters.Prague is a political, cultural and economic centre of central Europe complete with a rich history. Founded during the Romanesque and flourishing by the Gothic, Renaissance and Baroque eras, Prague was the capital of the Kingdom of Bohemia and the main residence of several Holy Roman Emperors, most notably of Charles IV (r. 1346–1378).[10] It was an important city to the Habsburg Monarchy and its Austro-Hungarian Empire. The city played major roles in the Bohemian and Protestant Reformation, the Thirty Years' War and in 20th-century history as the capital of Czechoslovakia between the World Wars and the post-war Communist era.[11]Prague is home to a number of well-known cultural attractions, many of which survived the violence and destruction of 20th-century Europe. Main attractions include Prague Castle, Charles Bridge, Old Town Square with the Prague astronomical clock, the Jewish Quarter, Petřín hill and Vyšehrad. Since 1992, the extensive historic centre of Prague has been included in the UNESCO list of World Heritage Sites.",
+  infoRU:
+    "Пра́га (чеш. Praha [ˈpraɦa]) — статутный город и столица Чешской Республики, административный центр Среднечешского края и двух его районов: Прага-Восток и Прага-Запад. Образует самостоятельную административно-территориальную единицу страны.Население: 1,3 млн человек (2018 год). Четырнадцатый по населению город в странах Евросоюза. Расположена на берегах реки Влтавы в сорока километрах от её впадения в Лабу.Главный политический, экономический и культурный центр Чехии. Крупный туристический центр Европы. Количество туристов в 2012 году превысило 5,4 млн человек[2].С X века столица Чешского государства; в 1526—1918 годы главный город Богемии под властью Габсбургов; с 1918 по 1992 год столица Чехословакии; с 1993 года — Чешской Республики. Исторический центр внесён в список Всемирного наследия ЮНЕСКО.",
+  infoTR: `Prag (Çekçe: Bu ses hakkındaPraha (yardım·bilgi); Çekçe telaffuz: [ˈpraɦa]), Çek Cumhuriyeti'nin başkenti ve en büyük şehri. Geçmişte Çekoslovakya'nın da başkentiydi. Orta Bohemya'da Vltava Nehri'nin üzerinde yer alır ve 1.2 milyon nüfusu vardır. İş dünyası istatistiklerine göre bu sayıya ek olarak 300.000 kişi de resmi kaydı olmaksızın Prag'da yaşamaktadır. Prag, geniş bir kitle tarafından dünyanın en güzel şehirlerinden biri olarak gösterilir. Prag "Altın Şehir", "Doksanların Sol Bankası", "Masal Şehri", "Şehirlerin Anası" ve "Avrupa'nın Kalbi" gibi isimlerle de anılır. Prag konumu gereği çevresindeki ülkeler ile merkezi bir konum oluşturur. Avrupa'daki en fazla iç kaleye sahip 3 şehirden birisidir. Bu şehrin gölgesi Franz Kafka olmuştur. Kafka için bile fazlasıyla turist çeken bir Orta Çağ şehridir. Prag Şehri 5 Nobel ödülüne sahiptir.Prag'ın bir özelliği de II. Dünya Savaşı'nda pek zarar görmemiş olmasıdır. Bu sayede birçok tarihi ev ve mekanı barındırır. Bu yerler arasında Aziz Vitus Katedrali de yer alır. Turizm alanında son yıllarda çok fazla rağbet görmektedir.1992'den beri Prag'ın tarihi merkezi, Birleşmiş Milletler Eğitim, Bilim ve Kültür Örgütü (UNESCO)'nun Dünya Mirasları listesinde yer almaktadır.`,
+  pictures: [
+    { original: prague1, thumbnail: prague1 },
+    { original: prague2, thumbnail: prague2 },
+    { original: prague3, thumbnail: prague3 },
+    { original: prague4, thumbnail: prague4 },
+    { original: prague5, thumbnail: prague5 },
+    { original: prague6, thumbnail: prague6 },
+    { original: prague7, thumbnail: prague7 },
+    { original: prague8, thumbnail: prague8 },
+    { original: prague9, thumbnail: prague9 },
+  ],
+  video: "",
+  coordinates: [50.080293, 14.428983],
+};
+
+export const turkey = {
+  capitalEN: "Ankara",
+  capitalRU: "Анкара",
+  capitalTR: "Ankara",
+  infoEN:
+    "Ankara,[a] historically known as Ancyra[b] and Angora,[8][c] is the capital of Turkey. Located in the central part of Anatolia, the city has a population of 4.5 million in its urban centre and over 5.6 million in Ankara Province,[10] making it Turkey's second-largest city after Istanbul.Serving as the capital of the ancient Celtic state of Galatia (280–64 BC), and later of the Roman province with the same name (25 BC–7th century), the city is very old with various Hattian, Hittite, Lydian, Phrygian, Galatian, Greek, Persian, Roman, Byzantine, and Ottoman archaeological sites. The Ottomans made the city the capital first of the Anatolia Eyalet (1393–late 15th century), and then the Angora Vilayet (1867–1922). The historical center of Ankara is a rocky hill rising 150 m (500 ft) over the left bank of the Ankara River, a tributary of the Sakarya River. The hill remains crowned by the ruins of Ankara Castle. Although few of its outworks have survived, there are well-preserved examples of Roman and Ottoman architecture throughout the city, the most remarkable being the 20 BC Temple of Augustus and Rome that boasts the Monumentum Ancyranum, the inscription recording the Res Gestae Divi Augusti.[11]On 23 April 1920, the Grand National Assembly of Turkey was established in Ankara, which became the headquarters of the Turkish National Movement during the Turkish War of Independence. Ankara became the new Turkish capital upon the establishment of the Republic on 29 October 1923, succeeding in this role the former Turkish capital Istanbul (Constantinople) following the fall of the Ottoman Empire. The government is a prominent employer, but Ankara is also an important commercial and industrial city, located at the centre of Turkey's road and railway networks. The city gave its name to the Angora wool shorn from Angora rabbits, the long-haired Angora goat (the source of mohair), and the Angora cat. The area is also known for its pears, honey and muscat grapes. Although situated in one of the driest regions of Turkey and surrounded mostly by steppe vegetation (except for the forested areas on the southern periphery), Ankara can be considered a green city in terms of green areas per inhabitant, at 72 square metres (775 square feet) per head.[12]",
+  infoRU:
+    "Анкара́ (тур. Ankara [ˈaŋkaɾa] Информация о файле слушать) — столица Турецкой Республики. Население города на 31 декабря 2015 года составляло 5 миллионов 270 тысяч 575 человек[5]. Это второй город в стране по населению после Стамбула.Город основан в VII веке до н. э. под названием Анкира (греческое ankyra, латинское аncora). Термин «лянгар» и его фонетические варианты часто встречаются в топонимах Центральной Азии и Ближнего Востока. Есть точка зрения, что город возник там, где остановилось переселявшееся кельтское племя галаты. Название длительное время употреблялось в форме Ангора, от которой образованы сохранившиеся русские понятия: ангорские козы, кошки, ангорская шерсть и т. п. После переноса в 1923 году в город столицы государства официально закрепляется современная форма Анкара[6].Город расположен на Анатолийском плоскогорье, у слияния рек Анкара и Чубук, на высоте ок. 938 м над уровнем моря[1][7] в центральной части страны. Расстояние до Чёрного моря составляет около 400 км, до Средиземного — 500 км.Анкара — второй по значению и потенциалу экономический центр Турции (после Стамбула). Её развитие определяется удобным положением на транспортных путях, наличием значительного числа государственных служащих и студентов, промышленных объектов, банков и торговых компаний. Близость города к металлургической базе в Карабюке, каменноугольным разработкам в Зонгулдаке и крупным источникам сельскохозяйственного сырья обусловили развитие в нём и пригородах обрабатывающей промышленности. Чтобы преодолеть хаотическое размещение промышленных объектов в городе, в 1990 была организована первая промышленная зона, в которой сосредоточилось до 80 % индустрии Анкары.",
+  infoTR:
+    "Ankara, Türkiye'nin başkenti ve en kalabalık ikinci ilidir.[6] Nüfusu 2020 itibarıyla 5.663.322 kişidir. Bu nüfus; 25 ilçe ve bu ilçelere bağlı 1425 mahallede yaşamaktadır. İl genelinde nüfus yoğunluğu 215'tir. Coğrafi olarak Türkiye'nin merkezine yakın bir konumda bulunur ve Batı Karadeniz Bölgesi'nde kalan kuzey kesimleri hariç, büyük bölümü İç Anadolu Bölgesi'nde yer alır. Yüz ölçümü olarak ülkenin üçüncü büyük ilidir. Bolu, Çankırı, Kırıkkale, Kırşehir, Aksaray, Konya ve Eskişehir illeri ile çevrilidir.Ankara'nın başkent ilan edilmesinin ardından (13 Ekim 1923) şehir hızla gelişmiş ve Türkiye'nin ikinci en kalabalık ili olmuştur. Türkiye Cumhuriyeti'nin ilk yıllarında ekonomisi tarım ve hayvancılığa dayanan ilin topraklarının yarısı hâlâ tarım amaçlı kullanılmaktadır. Ekonomik etkinlik büyük oranda ticaret ve sanayiye dayalıdır. Tarım ve hayvancılığın ağırlığı ise giderek azalmaktadır. Ankara ve civarındaki gerek kamu sektörü gerek özel sektör yatırımları, başka illerden büyük bir nüfus göçünü teşvik etmiştir. Cumhuriyetin kuruluşundan günümüze, nüfusu ülke nüfusunun iki katı hızda artmıştır. Nüfusun yaklaşık dörtte üçü hizmet sektörü olarak tanımlanabilecek memuriyet, ulaşım, haberleşme ve ticaret benzeri işlerde, dörtte biri sanayide, %2'si ise tarım alanında çalışır. Sanayi, özellikle tekstil, gıda ve inşaat sektörlerinde yoğunlaşmıştır. Günümüzde ise en çok savunma, metal ve motor sektörlerinde yatırım yapılmaktadır. Türkiye'nin en çok sayıda üniversiteye sahip ili olan Ankara'da ayrıca, üniversite diplomalı kişi oranı ülke ortalamasının iki katıdır. Bu eğitimli nüfus, teknoloji ağırlıklı yatırımların gereksinim duyduğu iş gücünü oluşturur. Ankara'dan otoyollar, demir yolu ve hava yoluyla Türkiye'nin diğer şehirlerine ulaşılır.",
+  pictures: [
+    { original: ankara, thumbnail: ankara },
+    { original: ankara2, thumbnail: ankara2 },
+    { original: ankara6, thumbnail: ankara6 },
+    { original: ankara4, thumbnail: ankara4 },
+    { original: ankara5, thumbnail: ankara5 },
+    { original: ankara7, thumbnail: ankara7 },
+    { original: ankara8, thumbnail: ankara8 },
+  ],
+  video: "",
+  coordinates: [39.920756, 32.854049],
 };

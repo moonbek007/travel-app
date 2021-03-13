@@ -1,11 +1,11 @@
-import tashkent from "../../assets/capitals/tashkent.webp";
 import washington from "../../assets/capitals/washington.jpeg";
 import zurich from "../../assets/capitals/zurich.jpg";
 import rome from "../../assets/capitals/rome.jpg";
 import warsaw from "../../assets/capitals/warsaw.jpg";
-import minsk from "../../assets/capitals/minsk.jpg";
 import moscow from "../../assets/capitals/moscow.jpeg";
 import madrid from "../../assets/capitals/madrid.jpg";
+import ankara from "../../assets/capitals/ankara.jpg";
+import prague from "../../assets/capitals/prague.jpg";
 const countries = [
   {
     imgURL: washington,
@@ -74,26 +74,26 @@ const countries = [
     cityTime: "Warsaw",
   },
   {
-    imgURL: minsk,
-    countryEN: "Belarus",
-    capitalEN: "Minsk",
-    countryRU: "Беларусь",
-    capitalRU: "Минск",
-    countryTR: "Belarus",
-    capitalTR: "Minsk",
+    imgURL: prague,
+    countryEN: "Czechia",
+    capitalEN: "Prague",
+    countryRU: "Чехия",
+    capitalRU: "Прага",
+    countryTR: "Çekya",
+    capitalTR: "Prag",
     area: "Europe",
-    cityTime: "Minsk",
+    cityTime: "Prague",
   },
   {
-    imgURL: tashkent,
-    countryEN: "Uzbekistan",
-    capitalEN: "Tashkent",
-    countryRU: "Узбекистан",
-    capitalRU: "Ташкент",
-    countryTR: "Özbekistan",
-    capitalTR: "Taşkent",
-    area: "Asia",
-    cityTime: "Tashkent",
+    imgURL: ankara,
+    countryEN: "Turkey",
+    capitalEN: "Ankara",
+    countryRU: "Турция",
+    capitalRU: "Анкара",
+    countryTR: "Türkiye",
+    capitalTR: "Ankara",
+    area: "Europe",
+    cityTime: "Istanbul",
   },
 ];
 export { countries };

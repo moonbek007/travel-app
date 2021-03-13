@@ -6,7 +6,6 @@ import TravelAppContext from "../../context/context";
 
 const Date = () => {
   const { area, cityTime } = React.useContext(TravelAppContext);
-  console.log(area, cityTime);
   const [min, setMin] = React.useState(null);
   const [hour, setHour] = React.useState(null);
   const [date, setDate] = React.useState(null);
