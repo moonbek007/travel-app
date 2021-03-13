@@ -31,7 +31,7 @@ const CountryPage = () => {
           <div className={s.text}>some text</div>
         </div>
     
-        <PhotoVideo />
+        <PhotoVideo pictures={country.pictures} />
       </div>
     </div>
   );
