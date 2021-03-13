@@ -8,7 +8,8 @@ import Main from "./components/Main/Main";
 import Footer from "./components/Footer/Footer";
 import CardHeader from "./components/Header/CardHeader";
 
-import { reducer, defaultState } from "./components/reducer/reducer";
+import { reducer } from "./components/reducer/reducer";
+import defaultState from "./components/reducer/reducer";
 import { useReducer } from "react";
 import TravelAppContext from "./components/context/context";
 function App() {
