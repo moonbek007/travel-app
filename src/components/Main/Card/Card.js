@@ -32,9 +32,9 @@ const Card = ({ imgUrl, country, capital }) => {
               language === "EN"
                 ? `Read more about ${country}!`
                 : language === "РУС"
-                ? `Читать больше про ${country}`
+                ? `Читать больше про ${country}!`
                 : `${country} 
-hakkında daha fazlasını oku`
+hakkında daha fazlasını oku!`
             }`}</h2>
           </Link>
         </div>

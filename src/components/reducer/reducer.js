@@ -10,7 +10,6 @@ export const reducer = (state, action) => {
       } else {
         return { ...state, language: action.payload, lang: "tr" };
       }
-      break;
     case "CHANGE_SEARCH_TEXT":
       return { ...state, searchText: action.payload };
     case "CLEAR_SEARCH_TEXT":

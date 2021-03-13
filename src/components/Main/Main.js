@@ -45,9 +45,7 @@ const Main = () => {
               key={idx}
             />
           );
-          break;
       }
-      return data;
     });
   };
 

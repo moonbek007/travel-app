@@ -43,9 +43,7 @@ const chooseCountryInfo = (currentCountry, currentLanguage) => {
           return { ...italy, capital: italy.capitalEN, info: italy.infoEN };
         default:
           return { ...italy, capital: italy.capitalEN, info: italy.infoEN };
-          break;
       }
-      break;
     case "РУС":
       switch (currentCountry) {
         case "Щвейцария":
@@ -78,12 +76,10 @@ const chooseCountryInfo = (currentCountry, currentLanguage) => {
           return { ...italy, capital: italy.capitalRU, info: italy.infoRU };
         default:
           return { ...italy, capital: italy.capitalRU, info: italy.infoRU };
-          break;
       }
-      break;
     case "TÜR":
       switch (currentCountry) {
-        case "Sveysariya":
+        case "İsviçre":
           return {
             ...switzerland,
             capital: switzerland.capitalTR,
@@ -95,30 +91,27 @@ const chooseCountryInfo = (currentCountry, currentLanguage) => {
             capital: belarus.capitalTR,
             info: belarus.infoTR,
           };
-        case "Polsha":
+        case "Polonya":
           return { ...poland, capital: poland.capitalTR, info: poland.infoTR };
-        case "AQSH":
+        case "A.B.D.":
           return { ...usa, capital: usa.capitalTR, info: usa.infoTR };
-        case "O'zbekiston":
+        case "Özbekistan":
           return {
             ...uzbekistan,
             capital: uzbekistan.capitalTR,
             info: uzbekistan.infoTR,
           };
-        case "Rossiya":
+        case "Rusya":
           return { ...russia, capital: russia.capitalTR, info: russia.infoTR };
-        case "Ispaniya":
+        case "İspanya":
           return { ...spain, capital: spain.capitalTR, info: spain.infoTR };
-        case "Italiya":
+        case "İtalya":
           return { ...italy, capital: italy.capitalTR, info: italy.infoTR };
         default:
           return { ...italy, capital: italy.capitalTR, info: italy.infoTR };
-          break;
       }
-      break;
     default:
       return { ...italy, capital: italy.capitalTR, info: italy.infoTR };
-      break;
   }
 };
 
