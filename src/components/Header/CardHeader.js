@@ -7,7 +7,13 @@ import homeIcon from "../../assets/home_icon.svg";
 
 import { Link } from "react-router-dom";
 
+import { useContext } from "react";
+import TravelAppContext from "../context/context";
+import { handleLanguageChange } from "../handlers/handlers";
+
 function CardHeader() {
+  const { language, dispatch } = useContext(TravelAppContext);
+
   return (
     <header>
       <div className={headerStyles.rowOne}>
@@ -16,10 +22,15 @@ function CardHeader() {
           <Link to="/main">
             <img src={homeIcon} alt="home-icon" />
           </Link>
-          <select name="languages" id="languages" value="EN">
+          <select
+            name="languages"
+            id="languages"
+            value={language}
+            onChange={(event) => handleLanguageChange(event, dispatch)}
+          >
             <option value="EN">EN</option>
-            <option value="RU">RU</option>
-            <option value="NA">NA</option>
+            <option value="РУС">РУС</option>
+            <option value="TÜR">TÜR</option>
           </select>
         </div>
       </div>

@@ -9,13 +9,28 @@ import homeIcon from "../../assets/home_icon.svg";
 
 import { Link } from "react-router-dom";
 
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useContext } from "react";
+import TravelAppContext from "../context/context";
+import {
+  handleLanguageChange,
+  handleSearchTextChange,
+  handleSearchTextSubmit,
+  handleSearchTextClear,
+} from "../handlers/handlers";
 
 function MainPageHeader() {
   const inputRef = useRef(null);
   useEffect(() => {
     inputRef.current.focus();
+    inputRef.current.addEventListener("keydown", (event) => {
+      if (event.key === "Enter") {
+        handleSearchTextSubmit(event, dispatch);
+      }
+    });
   }, []);
+
+  const { searchText, language, dispatch } = useContext(TravelAppContext);
+
   return (
     <header>
       <div className={headerStyles.rowOne}>
@@ -24,10 +39,17 @@ function MainPageHeader() {
           <Link to="/main">
             <img src={homeIcon} alt="home-icon" />
           </Link>
-          <select name="languages" id="languages" value="EN">
+          <select
+            name="languages"
+            id="languages"
+            value={language}
+            onChange={(event) => {
+              handleLanguageChange(event, dispatch);
+            }}
+          >
             <option value="EN">EN</option>
-            <option value="RU">RU</option>
-            <option value="NA">NA</option>
+            <option value="РУС">РУС</option>
+            <option value="TÜR">TÜR</option>
           </select>
         </div>
       </div>
@@ -42,13 +64,32 @@ function MainPageHeader() {
       <div className={headerStyles.rowThree}>
         <input
           type="text"
-          placeholder=" e.g. Italy , e.g. Rome"
+          placeholder={`${
+            language === "EN"
+              ? " e.g. Italy , e.g. Rome"
+              : language === "РУС"
+              ? "прим. Италия , прим. Рим"
+              : "örneğin İtalya , örneğin Roma"
+          }`}
           ref={inputRef}
+          value={searchText}
+          onChange={(event) => {
+            handleSearchTextChange(event, dispatch);
+            handleSearchTextSubmit(event, dispatch);
+          }}
         />
-        <button>
+        <button
+          onClick={(event) => {
+            handleSearchTextSubmit(event, dispatch);
+          }}
+        >
           <img src={searchLogo} alt="search-icon" />
         </button>
-        <button>
+        <button
+          onClick={(event) => {
+            handleSearchTextClear(event, dispatch);
+          }}
+        >
           <img src={clearLogo} alt="clear-icon" />
         </button>
       </div>

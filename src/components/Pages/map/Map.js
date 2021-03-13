@@ -2,14 +2,15 @@ import React from 'react';
 import { YMaps, Map, Placemark } from 'react-yandex-maps';
 import st from './map.module.css';
 
-const mapState = {
-  center: [53.902496, 27.561481],
+
+
+const MapWidget = ({ coordinates }) => {
+
+  const mapState = {
+  center: [{ coordinates }],
   zoom: 5, 
   region: "BY"
-};
-
-function MapWidget() {
-
+  };
   const mapRef = React.createRef(null);
   const lang = "ru_RU";   // "en_US" - english   "tr_TR" - turkish
   
@@ -40,11 +41,12 @@ function MapWidget() {
           onLoad={ymaps => getRegions(ymaps)}
           modules={["borders", "GeoObject"]}
         >
-          <Placemark geometry={mapState.center} />
+          <Placemark geometry={{ coordinates }} />
         </ Map>
       </YMaps>
     </div>
   );
 }
+
 
 export default MapWidget;
