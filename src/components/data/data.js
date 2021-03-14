@@ -18,6 +18,14 @@ const countries = [
     area: "America",
     cityTime: "New_York",
     utc: -5,
+    currency: {
+      name: {
+        EN: "USD",
+        РУС: "ДОЛ",
+        TÜR: "DOL",
+      },
+      symbol: "$",
+    },
   },
   {
     imgURL: zurich,
@@ -30,6 +38,14 @@ const countries = [
     area: "Europe",
     cityTime: "Zurich",
     utc: 1,
+    currency: {
+      name: {
+        EN: "CHF",
+        РУС: "ШВФ",
+        TÜR: "İSF",
+      },
+      symbol: "CHF",
+    },
   },
   {
     imgURL: rome,
@@ -42,6 +58,14 @@ const countries = [
     area: "Europe",
     cityTime: "Rome",
     utc: 1,
+    currency: {
+      name: {
+        EN: "EUR",
+        РУС: "ЕВР",
+        TÜR: "EUR",
+      },
+      symbol: "€",
+    },
   },
   {
     imgURL: madrid,
@@ -54,6 +78,14 @@ const countries = [
     area: "Europe",
     cityTime: "Madrid",
     utc: 1,
+    currency: {
+      name: {
+        EN: "EUR",
+        РУС: "ЕВР",
+        TÜR: "EUR",
+      },
+      symbol: "€",
+    },
   },
   {
     imgURL: moscow,
@@ -66,6 +98,14 @@ const countries = [
     area: "Europe",
     cityTime: "Moscow",
     utc: 3,
+    currency: {
+      name: {
+        EN: "RUB",
+        РУС: "РУБ",
+        TÜR: "RUB",
+      },
+      symbol: "₽",
+    },
   },
   {
     imgURL: warsaw,
@@ -78,6 +118,14 @@ const countries = [
     area: "Europe",
     cityTime: "Warsaw",
     utc: 1,
+    currency: {
+      name: {
+        EN: "PLN",
+        РУС: "ПЛЗ",
+        TÜR: "PLZ",
+      },
+      symbol: "zł",
+    },
   },
   {
     imgURL: prague,
@@ -90,6 +138,14 @@ const countries = [
     area: "Europe",
     cityTime: "Prague",
     utc: 1,
+    currency: {
+      name: {
+        EN: "CZK",
+        РУС: "ЧХК",
+        TÜR: "CKR",
+      },
+      symbol: "Kč",
+    },
   },
   {
     imgURL: ankara,
@@ -102,6 +158,14 @@ const countries = [
     area: "Europe",
     cityTime: "Istanbul",
     utc: 3,
+    currency: {
+      name: {
+        EN: "TRY",
+        РУС: "ТРЛ",
+        TÜR: "TRL",
+      },
+      symbol: "₺",
+    },
   },
 ];
 export { countries };

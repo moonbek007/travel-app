@@ -14,10 +14,9 @@ class ApiService {
     }
   }
 
-  async fetchTime(area, cityTime) {
-    console.log(`${this.url}/${area}/${cityTime}`);
+  async fetchCurrency(currencyName) {
     try {
-      const request = new Request(`${this.url}/${area}/${cityTime}`, {
+      const request = new Request(`${this.url}${currencyName}`, {
         method: "get",
       });
       return sendRequest(request);
@@ -37,7 +36,7 @@ export const apiService = new ApiService(
 );
 
 export const currencyAPI = new ApiService(
-  "https://api.exchangeratesapi.io/latest?base=RUB"
+  "https://api.exchangeratesapi.io/latest?base="
 );
 
 export const localTime = new Date();
