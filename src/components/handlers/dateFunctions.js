@@ -26,7 +26,7 @@ const weekDays = {
     4: "Persembe",
     5: "Cuma",
     6: "Cumartesi",
-    7: "Cumartesi",
+    7: "Pazar",
     0: "Pazar",
   },
 };
