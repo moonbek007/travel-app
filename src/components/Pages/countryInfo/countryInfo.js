@@ -111,6 +111,7 @@ export const poland = {
   ],
   video: "",
   coordinates: [52.22, 21.01],
+  region: "PL",
 };
 
 export const spain = {
@@ -137,6 +138,7 @@ export const spain = {
   ],
   video: "",
   coordinates: [40.419348, -3.700897],
+  region: "ES",
 };
 
 export const italy = {
@@ -166,6 +168,7 @@ export const italy = {
   ],
   video: "",
   coordinates: [41.9, 12.49],
+  region: "IT",
 };
 
 export const russia = {
@@ -190,6 +193,7 @@ export const russia = {
   ],
   video: "",
   coordinates: [55.75, 37.61],
+  region: "RU",
 };
 
 export const usa = {
@@ -219,6 +223,7 @@ export const usa = {
   ],
   video: "",
   coordinates: [38.907234, -77.02767],
+  region: "US",
 };
 
 export const switzerland = {
@@ -245,6 +250,7 @@ export const switzerland = {
   ],
   video: "",
   coordinates: [47.37, 8.5],
+  region: "CH",
 };
 
 export const czechia = {
@@ -269,6 +275,7 @@ export const czechia = {
   ],
   video: "",
   coordinates: [50.080293, 14.428983],
+  region: "CZ",
 };
 
 export const turkey = {
@@ -293,4 +300,5 @@ export const turkey = {
   ],
   video: "",
   coordinates: [39.920756, 32.854049],
+  region: "TR",
 };
