@@ -1,44 +1,35 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import s from "./date.module.css";
-
-import { localTime } from "../../../services/api.service";
 import TravelAppContext from "../../context/context";
-import { findWeekDay, findMonth } from "../../handlers/dateFunctions";
+const Dat = () => {
+  const { language, utc, area, cityTime, lang } = React.useContext(
+    TravelAppContext
+  );
 
-const Date = () => {
-  const { language, utc } = React.useContext(TravelAppContext);
+  const options = {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    timeZone: `${area}/${cityTime}`,
+  };
 
-  let weekDay = findWeekDay(localTime.getUTCDay(), language);
-  let month = findMonth(localTime.getMonth(), language);
-  let minutes = localTime.getMinutes();
-  let hours = utc + localTime.getUTCHours();
-  if (hours < 10 && hours >= 0) {
-    hours = "0" + hours.toString();
-  } else if (hours < 0) {
-    hours = 24 + hours;
-    weekDay = findWeekDay(localTime.getUTCDay() - 1, language);
-  } else if (hours >= 24) {
-    hours = hours - 24;
-    weekDay = findWeekDay(localTime.getUTCDay() + 1, language);
-  }
+  const [time, setTime] = useState(
+    new Date().toLocaleTimeString(lang, options)
+  );
 
-  if (minutes < 10) {
-    minutes = "0" + minutes.toString();
-  }
-
-  const year = localTime.getUTCFullYear();
+  useEffect(() => {
+    const intervalFunction = () => {
+      setTime(new Date().toLocaleTimeString(`${lang}`, options));
+    };
+    const interval = setInterval(intervalFunction, 1000);
+    return () => clearInterval(interval);
+  }, [language]);
 
   return (
     <div className={s.wrapper}>
-      <span>{hours}</span>
-      <span>:</span>
-      <span>{minutes}</span>
-      {/* <span className={s.date}>{date}</span> */}
-      <span>{weekDay}</span>
-      <span>{month}</span>
-      <span>{year}</span>
+      <span>{time}</span>
     </div>
   );
 };
-
-export default Date;
+export default Dat;
