@@ -2,14 +2,7 @@ import React from 'react';
 import { YMaps, Map, Placemark } from 'react-yandex-maps';
 import st from './map.module.css';
 
-const MapWidget = ({ coordinates }) => {
-  
-  const mapState = {
-    center: coordinates,
-    zoom: 5,
-    region: "US"
-  };
-  
+const MapWidget = ({ coordinates, region }) => {
   const mapRef = React.createRef(null);
   const lang = "ru_RU";   // "en_US" - english   "tr_TR" - turkish
 
@@ -21,7 +14,8 @@ const MapWidget = ({ coordinates }) => {
           quality: 2
         })
         .then(function (result) {
-          let country = result.features.find(item => item.properties.iso3166 === mapState.region);
+          let country = result.features.find(item => item.properties.iso3166 === region);
+          
           let geoObject = new ymaps.GeoObject(country);
           mapRef.current.geoObjects.add(geoObject);
         });
@@ -35,7 +29,7 @@ const MapWidget = ({ coordinates }) => {
           height="100%"
           width="100%"
           instanceRef={mapRef}
-          defaultState={mapState}
+          defaultState={{ center: coordinates, zoom: 5 }}
           onLoad={ymaps => getRegions(ymaps)}
           modules={["borders", "GeoObject"]}
         >
