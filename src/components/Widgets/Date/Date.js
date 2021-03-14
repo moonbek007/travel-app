@@ -1,49 +1,44 @@
 import React from "react";
 import s from "./date.module.css";
 
-class DateWidget extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { date: new Date() };
+import { localTime } from "../../../services/api.service";
+import TravelAppContext from "../../context/context";
+import { findWeekDay, findMonth } from "../../handlers/dateFunctions";
+
+const Date = () => {
+  const { language, utc } = React.useContext(TravelAppContext);
+
+  let weekDay = findWeekDay(localTime.getUTCDay(), language);
+  let month = findMonth(localTime.getMonth(), language);
+  let minutes = localTime.getMinutes();
+  let hours = utc + localTime.getUTCHours();
+  if (hours < 10 && hours >= 0) {
+    hours = "0" + hours.toString();
+  } else if (hours < 0) {
+    hours = 24 + hours;
+    weekDay = findWeekDay(localTime.getUTCDay() - 1, language);
+  } else if (hours >= 24) {
+    hours = hours - 24;
+    weekDay = findWeekDay(localTime.getUTCDay() + 1, language);
   }
 
-  componentDidMount() {
-    this.timerID = setInterval(
-      () => this.tick(),
-      1000
-    );
+  if (minutes < 10) {
+    minutes = "0" + minutes.toString();
   }
 
-  componentWillUnmount() {
-    clearInterval(this.timerID);
-  }
+  const year = localTime.getUTCFullYear();
 
-  tick() {
-    this.setState({
-      date: new Date()
-    });
-  }
-
-  render() {
-    let date = this.state.date;
-    let options = {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-      weekday: 'long',
-      timeZone: 'US/Eastern',       // timeZones Europe/Moscow, Europe/Busingen - швейц, Europe/Rome, Europe/Madrid, 	Europe/Warsaw, Europe/Prague, 	Turkey
-      hour: 'numeric',
-      minute: 'numeric',
-      second: 'numeric'
-    };
-
-    return (
-      <div className={s.wrapper}>
-        {date.toLocaleString("tr", options)}       {/* language  ru en tr*/}
-
-      </div>
-    );
-  }
+  return (
+    <div className={s.wrapper}>
+      <span>{hours}</span>
+      <span>:</span>
+      <span>{minutes}</span>
+      {/* <span className={s.date}>{date}</span> */}
+      <span>{weekDay}</span>
+      <span>{month}</span>
+      <span>{year}</span>
+    </div>
+  );
 };
 
-export default DateWidget;
+export default Date;
