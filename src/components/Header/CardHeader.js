@@ -11,16 +11,20 @@ import { useContext } from "react";
 import TravelAppContext from "../context/context";
 import { handleLanguageChange } from "../handlers/handlers";
 
+// import { removeInterval, intervalFunction } from "../Widgets/Date/Date";
+
 function CardHeader() {
   const { language, dispatch } = useContext(TravelAppContext);
   const currentBgPosition = useParallax();
 
   return (
     <header style={currentBgPosition}>
-
       <div className={s.rowOne}>
         <span>
-          <Link to='/'>
+          <Link
+            to="/"
+            // onClick={(event) => removeInterval(event, intervalFunction)}
+          >
             <img src={travelAppLogo} alt="travel-logo" />
           </Link>
         </span>
@@ -46,7 +50,7 @@ function CardHeader() {
           <img src={rightArrowLogo} alt="right-arrow-logo" />
         </button>
       </div>
-      
+
       <div className={s.rowThree}></div>
     </header>
   );

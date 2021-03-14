@@ -13,27 +13,25 @@ const Currency = () => {
   const [USDrate, SetUSDRate] = useState(1);
   const [EURrate, SetEURRate] = useState(2);
   const [RUBrate, SetRUBRate] = useState(3);
-  const [currentCurrency, setCurrentCurrency] = useState("");
   const { language, currency } = useContext(TravelAppContext);
-  // function convertRates() {
-  //   fx.settings = { from: "USD", to: "RUB" };
-  //   SetCurrentCountryRate(fx.convert(1).toFixed(2));
-  // }
+
   async function getRates(currency) {
-    // const response = await apiService.fetchPosts();
-    const response = await currencyAPI.fetchCurrency(await currency.name["EN"]);
-    console.log(await response.rates);
-    console.log(await response.rates["USD"]);
-    SetUSDRate(await response.rates.USD.toFixed(4));
-    SetEURRate(
+    const response = await currencyAPI.fetchCurrency(currency.name["EN"]);
+    SetUSDRate(
       `${
-        currency.name["EN"] === "EUR"
-          ? "1.0000"
-          : await response.rates.EUR.toFixed(4)
+        currency.name["EN"] === "USD" ? "1.0000" : response.rates.USD.toFixed(4)
       } `
     );
-    SetRUBRate(await response.rates.RUB.toFixed(4));
-    setCurrentCurrency(await response.base);
+    SetEURRate(
+      `${
+        currency.name["EN"] === "EUR" ? "1.0000" : response.rates.EUR.toFixed(4)
+      } `
+    );
+    SetRUBRate(
+      `${
+        currency.name["EN"] === "RUB" ? "1.0000" : response.rates.RUB.toFixed(4)
+      } `
+    );
     fx.rates = response.rates;
     fx.base = response.base;
   }
@@ -42,13 +40,6 @@ const Currency = () => {
     resolve(getRates(currency));
     reject(new Error("Currency service is unavalable"));
   });
-
-  // useEffect(() => {
-  //   promise.then(
-  //     () => convertRates(),
-  //     (error) => console.log(error)
-  //   ); // eslint-disable-next-line
-  // }, []);
 
   return (
     <div className={s.currency}>
@@ -75,7 +66,6 @@ const Currency = () => {
           {`${language === "EN" ? "RUB" : language === "РУС" ? "РУБ" : "RUB"}`}:{" "}
           {RUBrate} ₽
         </div>
-        {/* <div className={s["country-currency"]}>cC: {currentCountryRate}</div> */}
       </div>
     </div>
   );
