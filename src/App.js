@@ -18,7 +18,6 @@ function App() {
   const [state, dispatch] = useReducer(reducer, defaultState);
   return (
     <TravelAppContext.Provider value={{ ...state, dispatch }}>
-
       <Router>
         <div className="app">
           <Switch>

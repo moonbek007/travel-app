@@ -9,6 +9,7 @@ import clearLogo from "../../assets/clear_icon.svg";
 import travelAppLogo from "../../assets/travel_app_logo.png";
 
 import TravelAppContext from "../context/context";
+
 import {
   handleLanguageChange,
   handleSearchTextChange,

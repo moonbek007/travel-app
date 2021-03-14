@@ -51,6 +51,7 @@ export const reducer = (state, action) => {
             lang: "en",
             countryToDisplay: translatedCountry,
             utc: temporaryCountry.utc,
+            currency: temporaryCountry.currency,
           })
         );
         return {
@@ -59,6 +60,7 @@ export const reducer = (state, action) => {
           lang: "en",
           countryToDisplay: translatedCountry,
           utc: temporaryCountry.utc,
+          currency: temporaryCountry.currency,
         };
       } else if (action.payload === "РУС") {
         localStorage.setItem(
@@ -69,6 +71,7 @@ export const reducer = (state, action) => {
             lang: "ru",
             countryToDisplay: translatedCountry,
             utc: temporaryCountry.utc,
+            currency: temporaryCountry.currency,
           })
         );
         return {
@@ -77,6 +80,7 @@ export const reducer = (state, action) => {
           lang: "ru",
           countryToDisplay: translatedCountry,
           utc: temporaryCountry.utc,
+          currency: temporaryCountry.currency,
         };
       } else {
         localStorage.setItem(
@@ -87,6 +91,7 @@ export const reducer = (state, action) => {
             lang: "tr",
             countryToDisplay: translatedCountry,
             utc: temporaryCountry.utc,
+            currency: temporaryCountry.currency,
           })
         );
         return {
@@ -95,6 +100,7 @@ export const reducer = (state, action) => {
           lang: "tr",
           countryToDisplay: translatedCountry,
           utc: temporaryCountry.utc,
+          currency: temporaryCountry.currency,
         };
       }
     case "CHANGE_SEARCH_TEXT":
@@ -146,6 +152,7 @@ export const reducer = (state, action) => {
           area: tempCountry.area,
           cityTime: tempCountry.cityTime,
           utc: tempCountry.utc,
+          currency: tempCountry.currency,
         })
       );
       return {
@@ -154,6 +161,7 @@ export const reducer = (state, action) => {
         area: tempCountry.area,
         cityTime: tempCountry.cityTime,
         utc: tempCountry.utc,
+        currency: tempCountry.currency,
       };
     default:
       break;
@@ -173,6 +181,14 @@ if (localStorage.getItem("state") === null) {
       area: "Europe",
       cityTime: "Zurich",
       utc: 1,
+      currency: {
+        name: {
+          EN: "CHF",
+          РУС: "ШВФ",
+          TÜR: "İSF",
+        },
+        symbol: "CHF",
+      },
     })
   );
 }

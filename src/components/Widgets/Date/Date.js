@@ -7,11 +7,11 @@ import { findWeekDay, findMonth } from "../../handlers/dateFunctions";
 
 const Date = () => {
   const { language, utc } = React.useContext(TravelAppContext);
+
   let weekDay = findWeekDay(localTime.getUTCDay(), language);
   let month = findMonth(localTime.getMonth(), language);
   let minutes = localTime.getMinutes();
   let hours = utc + localTime.getUTCHours();
-  console.log(hours);
   if (hours < 10 && hours >= 0) {
     hours = "0" + hours.toString();
   } else if (hours < 0) {
@@ -21,8 +21,13 @@ const Date = () => {
     hours = hours - 24;
     weekDay = findWeekDay(localTime.getUTCDay() + 1, language);
   }
-  const year = localTime.getUTCDay();
-  console.log(year);
+
+  if (minutes < 10) {
+    minutes = "0" + minutes.toString();
+  }
+
+  const year = localTime.getUTCFullYear();
+
   return (
     <div className={s.wrapper}>
       <span>{hours}</span>
@@ -31,6 +36,7 @@ const Date = () => {
       {/* <span className={s.date}>{date}</span> */}
       <span>{weekDay}</span>
       <span>{month}</span>
+      <span>{year}</span>
     </div>
   );
 };
