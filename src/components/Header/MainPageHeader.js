@@ -8,9 +8,8 @@ import searchLogo from "../../assets/search_icon.svg";
 import clearLogo from "../../assets/clear_icon.svg";
 import travelAppLogo from "../../assets/travel_app_logo.png";
 
-import { Link } from "react-router-dom";
-// import { useRef, useEffect, useContext } from "react";
 import TravelAppContext from "../context/context";
+
 import {
   handleLanguageChange,
   handleSearchTextChange,
@@ -37,9 +36,6 @@ function MainPageHeader() {
       <div className={headerStyles.rowOne}>
         <img src={travelAppLogo} alt="travel-logo" />
         <div>
-          {/* <Link to="/">
-            <img src={homeIcon} alt="home-icon" />
-          </Link> */}
           <select
             name="languages"
             id="languages"
