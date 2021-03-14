@@ -21,6 +21,11 @@ const Date = () => {
     hours = hours - 24;
     weekDay = findWeekDay(localTime.getUTCDay() + 1, language);
   }
+
+  if (minutes < 10) {
+    minutes = "0" + minutes.toString();
+  }
+
   const year = localTime.getUTCFullYear();
 
   return (

@@ -22,8 +22,16 @@ const Currency = () => {
   async function getRates(currency) {
     // const response = await apiService.fetchPosts();
     const response = await currencyAPI.fetchCurrency(await currency.name["EN"]);
+    console.log(await response.rates);
+    console.log(await response.rates["USD"]);
     SetUSDRate(await response.rates.USD.toFixed(4));
-    SetEURRate(await response.rates.EUR.toFixed(4));
+    SetEURRate(
+      `${
+        currency.name["EN"] === "EUR"
+          ? "1.0000"
+          : await response.rates.EUR.toFixed(4)
+      } `
+    );
     SetRUBRate(await response.rates.RUB.toFixed(4));
     setCurrentCurrency(await response.base);
     fx.rates = response.rates;
