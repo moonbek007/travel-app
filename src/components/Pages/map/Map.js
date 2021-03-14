@@ -2,9 +2,21 @@ import React from 'react';
 import { YMaps, Map, Placemark } from 'react-yandex-maps';
 import st from './map.module.css';
 
+import TravelAppContext from "../../context/context";
+
 const MapWidget = ({ coordinates, region }) => {
+
+  const { language } = React.useContext(TravelAppContext);
   const mapRef = React.createRef(null);
-  const lang = "ru_RU";   // "en_US" - english   "tr_TR" - turkish
+  console.log(language)
+  let lang;
+  if (language === 'РУС') {
+    lang = "ru_RU";
+  } else if (language === 'EN') {
+    lang = "en_US";
+  } else {
+    lang = "tr_TR";
+  }
 
   const getRegions = ymaps => {
     if (mapRef && mapRef.current) {
@@ -15,7 +27,7 @@ const MapWidget = ({ coordinates, region }) => {
         })
         .then(function (result) {
           let country = result.features.find(item => item.properties.iso3166 === region);
-          
+
           let geoObject = new ymaps.GeoObject(country);
           mapRef.current.geoObjects.add(geoObject);
         });
