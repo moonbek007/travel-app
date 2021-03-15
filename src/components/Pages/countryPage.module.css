@@ -18,7 +18,7 @@ h1 {
 .photoBox,
 .countryInfo,
 .mapBox {
-  min-height: 200px;
+
   margin: 0 50px;
   border-radius: 20px;
   margin-top: 20px;
@@ -28,7 +28,7 @@ h1 {
 .countryInfo,
 .mapBox {
   background-color: #d14242;
-  min-height: 200px;
+ 
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -75,4 +75,5 @@ h1 {
 
 .map {
   height: calc(100vw / 3);
+  width: calc(100vw / 3);
 }
