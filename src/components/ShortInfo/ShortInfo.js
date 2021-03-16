@@ -1,17 +1,16 @@
 import React from "react";
 import shortInfoStyles from "./shortinfo.module.css";
-function ShortInfo({ capital, info, picture, language }) {
+function ShortInfo({ country, capital, info, picture, language }) {
   return (
     <div className={shortInfoStyles.countryInfo}>
       <div className={shortInfoStyles.mainPhoto}>
         <img src={picture} alt="pic" width="60%" />
         <h3>
           {language === "EN"
-            ? `About ${capital}.`
+            ? `${country} , capital ${capital}.`
             : language === "РУС"
-            ? `Про ${capital}.`
-            : `${capital} 
-hakkında.`}
+            ? `${country} , столица ${capital}.`
+            : `${country} , başkent ${capital}.`}
         </h3>
         <p>{info}</p>
       </div>
