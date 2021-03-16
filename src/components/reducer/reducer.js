@@ -163,6 +163,18 @@ export const reducer = (state, action) => {
         utc: tempCountry.utc,
         currency: tempCountry.currency,
       };
+    case "CLOSE_MODAL":
+      localStorage.setItem(
+        "state",
+        JSON.stringify({ ...state, showModal: false })
+      );
+      return { ...state, showModal: false };
+    case "OPEN_MODAL":
+      localStorage.setItem(
+        "state",
+        JSON.stringify({ ...state, showModal: true, modalType: action.payload })
+      );
+      return { ...state, showModal: true, modalType: action.paylod };
     default:
       break;
   }
@@ -189,6 +201,8 @@ if (localStorage.getItem("state") === null) {
         },
         symbol: "CHF",
       },
+      showModal: false,
+      modalType: "register",
     })
   );
 }

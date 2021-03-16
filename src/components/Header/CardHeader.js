@@ -43,7 +43,6 @@ function CardHeader() {
       </div>
 
       <div className={s.rowTwo} />
-
       <div className={s.rowThree}></div>
     </header>
   );
