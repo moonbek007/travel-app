@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useContext, useState } from "react";
 import useParallax from "../../custom-hooks/useParallax";
-import headerStyles from "./header.module.css";
+import s from "./header.module.css";
 
 import leftArrowLogo from "../../assets/left_arrow.svg";
 import rightArrowLogo from "../../assets/right_arrow.svg";
@@ -35,8 +35,8 @@ function MainPageHeader() {
   return (
     <header style={currentBgPosition}>
       {showModal && (
-        <div className={headerStyles.modal}>
-          <div className={headerStyles.subscriptionForm}>
+        <div className={s.modal}>
+          <div className={s.subscriptionForm}>
             <h1>
               {`${modalType === "register" ? "Registration Form" : "Login"}`}
             </h1>
@@ -58,7 +58,7 @@ function MainPageHeader() {
                   accept="image/*"
                 />
               )}
-              <div className={headerStyles.buttons}>
+              <div className={s.buttons}>
                 <button type="submit">{`${
                   modalType === "register" ? "Register" : "Logn in"
                 }`}</button>
@@ -76,9 +76,9 @@ function MainPageHeader() {
           </div>
         </div>
       )}
-      <div className={headerStyles.rowOne}>
+      <div className={s.rowOne}>
         <img src={travelAppLogo} alt="travel-logo" />
-        <div className={headerStyles.headerButtons}>
+        <div className={s.headerButtons}>
           <select
             name="languages"
             id="languages"
@@ -117,8 +117,9 @@ function MainPageHeader() {
           }`}</button>
         </div>
       </div>
-      <div className={headerStyles.rowTwo}></div>
-      <div className={headerStyles.rowThree}>
+
+      <div className={s.rowTwo} />
+      <div className={s.rowThree}>
         <button
           onClick={(event) => {
             handleSearchTextSubmit(event, dispatch);
@@ -134,10 +135,10 @@ function MainPageHeader() {
           type="text"
           placeholder={`${
             language === "EN"
-              ? " e.g. Italy , e.g. Rome"
+              ? "Italy , Rome"
               : language === "РУС"
-              ? "прим. Италия , прим. Рим"
-              : "örneğin İtalya , örneğin Roma"
+              ? "Италия , Рим"
+              : "İtalya , Roma"
           }`}
           ref={inputRef}
           value={searchText}
