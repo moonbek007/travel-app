@@ -20,9 +20,9 @@ const PhotoVideo = ({ pictures, video }) => {
           width="100%"
           height="335"
           src={video}
-          frameborder="0"
+          frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
+          allowFullScreen
         ></iframe>
       </div>
     </div>
