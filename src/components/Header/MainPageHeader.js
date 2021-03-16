@@ -50,8 +50,10 @@ function MainPageHeader() {
           </select>
         </div>
       </div>
+
       <div className={s.rowTwo} />
       <div className={s.rowThree}>
+
         <button
           onClick={(event) => {
             handleSearchTextSubmit(event, dispatch);
@@ -79,6 +81,7 @@ function MainPageHeader() {
             handleSearchTextSubmit(event, dispatch);
           }}
         />
+
         <button
           onClick={(event) => {
             handleSearchTextClear(event, dispatch);

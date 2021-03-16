@@ -77,13 +77,13 @@ header {
 .rowThree {
   height: 30%;
   display: flex;
-  justify-content: space-around;
   align-items: center;
+  margin-left: 5vw;
+  margin-right: 5vw;
 }
 .rowThree input {
-  height: 22%;
-  width: 80%;
-  border-radius: 10px;
+  height: 25%;
+  width: 90%;
   outline: none;
   border: none;
   text-align: center;
@@ -92,11 +92,11 @@ header {
 .rowThree button {
   height: 25%;
   width: 40px;
-  border-radius: 10px;
   cursor: pointer;
   border: none;
   outline: none;
-  background-color: inherit;
+  background: #ffffff;
+  padding: 5px;
 }
 .rowThree img {
   height: 100%;
@@ -119,4 +119,3 @@ header {
     height: 26%;
     width: 80%;
   }
-}
