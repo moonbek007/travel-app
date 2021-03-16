@@ -18,8 +18,8 @@ function CardHeader() {
   const currentBgPosition = useParallax();
 
   return (
-    <header style={currentBgPosition}>
-      <div className={s.rowOne}>
+    <header className={s.page_header} style={currentBgPosition}>
+      <div className={`${s.rowOne}`}>
         <span>
           <Link
             to="/"
@@ -42,15 +42,7 @@ function CardHeader() {
         </div>
       </div>
 
-      <div className={s.rowTwo}>
-        <button>
-          <img src={leftArrowLogo} alt="left-arrow-logo" />
-        </button>
-        <button>
-          <img src={rightArrowLogo} alt="right-arrow-logo" />
-        </button>
-      </div>
-
+      <div className={s.rowTwo} />
       <div className={s.rowThree}></div>
     </header>
   );

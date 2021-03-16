@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useContext } from "react";
 import useParallax from "../../custom-hooks/useParallax";
-import headerStyles from "./header.module.css";
+import s from "./header.module.css";
 
 import leftArrowLogo from "../../assets/left_arrow.svg";
 import rightArrowLogo from "../../assets/right_arrow.svg";
@@ -33,7 +33,7 @@ function MainPageHeader() {
 
   return (
     <header style={currentBgPosition}>
-      <div className={headerStyles.rowOne}>
+      <div className={s.rowOne}>
         <img src={travelAppLogo} alt="travel-logo" />
         <div>
           <select
@@ -50,23 +50,27 @@ function MainPageHeader() {
           </select>
         </div>
       </div>
-      <div className={headerStyles.rowTwo}>
-        <button>
-          <img src={leftArrowLogo} alt="left-arrow-logo" />
+      <div className={s.rowTwo} />
+      <div className={s.rowThree}>
+        <button
+          onClick={(event) => {
+            handleSearchTextSubmit(event, dispatch);
+          }}
+          style={{
+            borderTopLeftRadius: "15px",
+            borderBottomLeftRadius: "15px",
+          }}
+        >
+          <img src={clearLogo} alt="search-icon" />
         </button>
-        <button>
-          <img src={rightArrowLogo} alt="right-arrow-logo" />
-        </button>
-      </div>
-      <div className={headerStyles.rowThree}>
         <input
           type="text"
           placeholder={`${
             language === "EN"
-              ? " e.g. Italy , e.g. Rome"
+              ? "Italy , Rome"
               : language === "РУС"
-              ? "прим. Италия , прим. Рим"
-              : "örneğin İtalya , örneğin Roma"
+              ? "Италия , Рим"
+              : "İtalya , Roma"
           }`}
           ref={inputRef}
           value={searchText}
@@ -77,17 +81,14 @@ function MainPageHeader() {
         />
         <button
           onClick={(event) => {
-            handleSearchTextSubmit(event, dispatch);
-          }}
-        >
-          <img src={searchLogo} alt="search-icon" />
-        </button>
-        <button
-          onClick={(event) => {
             handleSearchTextClear(event, dispatch);
           }}
+          style={{
+            borderTopRightRadius: "15px",
+            borderBottomRightRadius: "15px",
+          }}
         >
-          <img src={clearLogo} alt="clear-icon" />
+          <img src={searchLogo} alt="clear-icon" />
         </button>
       </div>
     </header>
