@@ -59,6 +59,17 @@ function MainPageHeader() {
         </button>
       </div>
       <div className={headerStyles.rowThree}>
+        <button
+          onClick={(event) => {
+            handleSearchTextSubmit(event, dispatch);
+          }}
+          style={{
+            borderTopLeftRadius: "15px",
+            borderBottomLeftRadius: "15px",
+          }}
+        >
+          <img src={clearLogo} alt="search-icon" />
+        </button>
         <input
           type="text"
           placeholder={`${
@@ -75,19 +86,17 @@ function MainPageHeader() {
             handleSearchTextSubmit(event, dispatch);
           }}
         />
-        <button
-          onClick={(event) => {
-            handleSearchTextSubmit(event, dispatch);
-          }}
-        >
-          <img src={searchLogo} alt="search-icon" />
-        </button>
+
         <button
           onClick={(event) => {
             handleSearchTextClear(event, dispatch);
           }}
+          style={{
+            borderTopRightRadius: "15px",
+            borderBottomRightRadius: "15px",
+          }}
         >
-          <img src={clearLogo} alt="clear-icon" />
+          <img src={searchLogo} alt="clear-icon" />
         </button>
       </div>
     </header>
