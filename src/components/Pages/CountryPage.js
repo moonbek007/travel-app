@@ -25,13 +25,13 @@ const CountryPage = () => {
         />
 
         <div className={s.mapBox}>
+          <div className={s.text}>&#10077; find your way &#10078;</div>
           <div className={s.map}>
             <MapWidget 
               coordinates={country.coordinates} 
               region={country.region}
               />
           </div>
-          <div className={s.text}>some text</div>
         </div>
         <PhotoVideo pictures={country.pictures} video={country.video} />
       </div>

@@ -11,7 +11,11 @@ footer {
 
 .logo {
   margin: auto;
-  width: 80px;
+  max-width: 80px;
+}
+
+.logo img {
+  width: 100%;
 }
 
 .gitBlock {
@@ -37,10 +41,31 @@ footer {
 }
 
 @media (max-width: 580px) {
-    .gitBlock {
-        display: flex;
-        flex-direction: column;
-        font-size: 12px;
-      }
+  .gitBlock {
+    display: flex;
+    font-size: 10px;
+  }
+  .gitLinks {
+    margin-right: 14px;
+    color: white;
+  }
+  .logo {
+    max-width: 60px;
+  }
+  .gitLogo {
+    height: 18px;
+  }
+} @media (max-width: 400px) {
+  .gitBlock {
+    display: flex;
+    flex-direction: column;
+    font-size: 8px;
+  }
+  .gitLinks {
+    margin-right: 10px;
+  }
+  .logo {
+    max-width: 40px;
+  }
 }
 

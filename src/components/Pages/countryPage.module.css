@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
+
 html {
 	background-color: #f7f7f7;
 }
@@ -29,25 +31,21 @@ h1 {
 .widget,
 .countryInfo,
 .mapBox {
-  background-color: #d14242;
- 
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
-.photoBox {
-	background-color: blueviolet;
-}
-
-.countryInfo {
-	background-color: rgb(31, 215, 221);
-}
-
 .mapBox {
-  background-color: rgb(207, 100, 198);
-  margin-bottom: 20px;
+  margin: 4%;
+  width: 100%;
+  border-radius: 0;
+  background-color: #FFCC99;
+  box-shadow: 0 10px 10px 4px rgba(0, 0, 0, .4);
   clear: both;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .weather,
@@ -56,7 +54,6 @@ h1 {
 .mainPhoto,
 .text {
   flex: 1;
-  background-color: rgb(218, 198, 86);
   margin: 10px;
   border-radius: 5px;
   text-align: center;
@@ -68,14 +65,17 @@ h1 {
 
 .info,
 .map {
-  flex: 2;
-  background-color: rgb(218, 198, 86);
-  margin: 10px;
-  border-radius: 5px;
+  margin-bottom: 1%;
   text-align: center;
 }
 
 .map {
   height: calc(100vw / 3);
-  width: calc(100vw / 3);
+  width: calc(100vw / 1.1);
+}
+
+.text {
+  font-family: 'Akaya Telivigala', cursive;
+  text-transform: uppercase;
+  font-size: 2em;
 }
