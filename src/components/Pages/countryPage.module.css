@@ -31,19 +31,17 @@ h1 {
 .widget,
 .countryInfo,
 .mapBox {
-  background-color: #ff3b3b;
- 
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
 .mapBox {
+  margin: 4%;
   width: 100%;
   border-radius: 0;
   background-color: #FFCC99;
   box-shadow: 0 10px 10px 4px rgba(0, 0, 0, .4);
-  margin-bottom: 20px;
   clear: both;
   display: flex;
   flex-direction: column;
