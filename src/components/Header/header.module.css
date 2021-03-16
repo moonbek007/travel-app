@@ -89,3 +89,74 @@ header {
 select {
   cursor: pointer;
 }
+.modal {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.473);
+  z-index: 1;
+}
+.subscriptionForm {
+  position: fixed;
+  top: 5vh;
+  right: 1vw;
+  left: 1vw;
+  min-width: 320px;
+  background: gainsboro;
+  z-index: 2;
+  margin: 0 auto;
+  width: 80vw;
+  height: 90vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(35deg, #ccffff, #ffcccc);
+}
+.subscriptionForm input {
+  display: block;
+  margin: 40px auto;
+  border-radius: 7px;
+  border: inherit;
+}
+.subscriptionForm button {
+  background: khaki;
+  border: inherit;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px;
+  background: rgba(35, 185, 29, 0.932);
+}
+.headerButtons {
+  display: flex;
+  flex-direction: column;
+}
+.headerButtons button {
+  margin-top: 10px;
+  margin-right: 10px;
+  width: 100px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 6px;
+  border: none;
+  background: black;
+  color: #ffffff;
+  cursor: pointer;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 576px) {
+  .subscriptionForm {
+    width: 96vw;
+    height: 96vh;
+    right: 0;
+    left: 0;
+    top: 0;
+    margin: 0 auto;
+  }
+}
