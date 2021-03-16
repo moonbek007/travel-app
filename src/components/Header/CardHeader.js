@@ -42,15 +42,7 @@ function CardHeader() {
         </div>
       </div>
 
-      <div className={s.rowTwo}>
-        <button>
-          <img src={leftArrowLogo} alt="left-arrow-logo" />
-        </button>
-        <button>
-          <img src={rightArrowLogo} alt="right-arrow-logo" />
-        </button>
-      </div>
-
+      <div className={s.rowTwo}></div>
       <div className={s.rowThree}></div>
     </header>
   );
