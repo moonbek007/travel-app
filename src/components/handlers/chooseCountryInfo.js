@@ -13,6 +13,7 @@ const chooseCountryInfo = (currentCountry) => {
     case "Switzerland":
       return {
         ...switzerland,
+        country: switzerland.countryEN,
         capital: switzerland.capitalEN,
         info: switzerland.infoEN,
         area: switzerland.area,
@@ -21,6 +22,7 @@ const chooseCountryInfo = (currentCountry) => {
     case "Czechia":
       return {
         ...czechia,
+        country: czechia.countryEN,
         capital: czechia.capitalEN,
         info: czechia.infoEN,
         area: czechia.area,
@@ -29,6 +31,7 @@ const chooseCountryInfo = (currentCountry) => {
     case "Poland":
       return {
         ...poland,
+        country: poland.countryEN,
         capital: poland.capitalEN,
         info: poland.infoEN,
         area: poland.area,
@@ -37,6 +40,7 @@ const chooseCountryInfo = (currentCountry) => {
     case "USA":
       return {
         ...usa,
+        country: usa.countryEN,
         capital: usa.capitalEN,
         info: usa.infoEN,
         area: usa.area,
@@ -45,6 +49,7 @@ const chooseCountryInfo = (currentCountry) => {
     case "Turkey":
       return {
         ...turkey,
+        country: turkey.countryEN,
         capital: turkey.capitalEN,
         info: turkey.infoEN,
         area: turkey.area,
@@ -53,6 +58,7 @@ const chooseCountryInfo = (currentCountry) => {
     case "Russia":
       return {
         ...russia,
+        country: russia.countryEN,
         capital: russia.capitalEN,
         info: russia.infoEN,
         area: russia.area,
@@ -61,6 +67,7 @@ const chooseCountryInfo = (currentCountry) => {
     case "Spain":
       return {
         ...spain,
+        country: spain.countryEN,
         capital: spain.capitalEN,
         info: spain.infoEN,
         area: spain.area,
@@ -69,6 +76,7 @@ const chooseCountryInfo = (currentCountry) => {
     case "Italy":
       return {
         ...italy,
+        country: italy.countryEN,
         capital: italy.capitalEN,
         info: italy.infoEN,
         area: italy.area,
@@ -77,6 +85,7 @@ const chooseCountryInfo = (currentCountry) => {
     case "Швейцария":
       return {
         ...switzerland,
+        country: switzerland.countryRU,
         capital: switzerland.capitalRU,
         info: switzerland.infoRU,
         area: switzerland.area,
@@ -85,6 +94,7 @@ const chooseCountryInfo = (currentCountry) => {
     case "Чехия":
       return {
         ...czechia,
+        country: czechia.countryRU,
         capital: czechia.capitalRU,
         info: czechia.infoRU,
         area: czechia.area,
@@ -93,6 +103,7 @@ const chooseCountryInfo = (currentCountry) => {
     case "Польша":
       return {
         ...poland,
+        country: poland.countryRU,
         capital: poland.capitalRU,
         info: poland.infoRU,
         area: poland.area,
@@ -101,6 +112,7 @@ const chooseCountryInfo = (currentCountry) => {
     case "США":
       return {
         ...usa,
+        country: usa.countryRU,
         capital: usa.capitalRU,
         info: usa.infoRU,
         area: usa.area,
@@ -109,6 +121,7 @@ const chooseCountryInfo = (currentCountry) => {
     case "Турция":
       return {
         ...turkey,
+        country: turkey.countryRU,
         capital: turkey.capitalRU,
         info: turkey.infoRU,
         area: turkey.area,
@@ -117,6 +130,7 @@ const chooseCountryInfo = (currentCountry) => {
     case "Россия":
       return {
         ...russia,
+        country: russia.countryRU,
         capital: russia.capitalRU,
         info: russia.infoRU,
         area: russia.area,
@@ -125,6 +139,7 @@ const chooseCountryInfo = (currentCountry) => {
     case "Испания":
       return {
         ...spain,
+        country: spain.countryRU,
         capital: spain.capitalRU,
         info: spain.infoRU,
         area: spain.area,
@@ -133,6 +148,7 @@ const chooseCountryInfo = (currentCountry) => {
     case "Италия":
       return {
         ...italy,
+        country: italy.countryRU,
         capital: italy.capitalRU,
         info: italy.infoRU,
         area: italy.area,
@@ -141,6 +157,7 @@ const chooseCountryInfo = (currentCountry) => {
     case "İsviçre":
       return {
         ...switzerland,
+        country: switzerland.countryTR,
         capital: switzerland.capitalTR,
         info: switzerland.infoTR,
         area: switzerland.area,
@@ -149,6 +166,7 @@ const chooseCountryInfo = (currentCountry) => {
     case "Çekya":
       return {
         ...czechia,
+        country: czechia.countryTR,
         capital: czechia.capitalTR,
         info: czechia.infoTR,
         area: czechia.area,
@@ -157,6 +175,7 @@ const chooseCountryInfo = (currentCountry) => {
     case "Polonya":
       return {
         ...poland,
+        country: poland.countryTR,
         capital: poland.capitalTR,
         info: poland.infoTR,
         area: poland.area,
@@ -165,6 +184,7 @@ const chooseCountryInfo = (currentCountry) => {
     case "ABD":
       return {
         ...usa,
+        country: usa.countryTR,
         capital: usa.capitalTR,
         info: usa.infoTR,
         area: usa.area,
@@ -173,6 +193,7 @@ const chooseCountryInfo = (currentCountry) => {
     case "Türkiye":
       return {
         ...turkey,
+        country: turkey.countryTR,
         capital: turkey.capitalTR,
         info: turkey.infoTR,
         area: turkey.area,
@@ -181,6 +202,7 @@ const chooseCountryInfo = (currentCountry) => {
     case "Rusya":
       return {
         ...russia,
+        country: russia.countryTR,
         capital: russia.capitalTR,
         info: russia.infoTR,
         area: russia.area,
@@ -189,6 +211,7 @@ const chooseCountryInfo = (currentCountry) => {
     case "İspanya":
       return {
         ...spain,
+        country: spain.countryTR,
         capital: spain.capitalTR,
         info: spain.infoTR,
         area: spain.area,
@@ -197,6 +220,7 @@ const chooseCountryInfo = (currentCountry) => {
     case "İtalya":
       return {
         ...italy,
+        country: italy.countryTR,
         capital: italy.capitalTR,
         info: italy.infoTR,
         area: italy.area,
@@ -205,6 +229,7 @@ const chooseCountryInfo = (currentCountry) => {
     default:
       return {
         ...italy,
+        country: italy.countryTR,
         capital: italy.capitalTR,
         info: italy.infoTR,
         area: italy.area,
