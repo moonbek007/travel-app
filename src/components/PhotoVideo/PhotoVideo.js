@@ -3,7 +3,6 @@ import s from "./photo-video.module.css";
 import "react-image-gallery/styles/css/image-gallery.css";
 import "video-react/dist/video-react.css";
 import ImageGallery from "react-image-gallery";
-import { Player } from "video-react";
 
 const PhotoVideo = ({ pictures, video }) => {
   return (
@@ -17,12 +16,14 @@ const PhotoVideo = ({ pictures, video }) => {
         />
       </div>
       <div className={s.video_player}>
-        <Player
-          playsInline
-          poster={pictures[5].original}
-          sizes={"500px"}
-          src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4"
-        />
+        <iframe
+          width="100%"
+          height="335"
+          src={video}
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
       </div>
     </div>
   );

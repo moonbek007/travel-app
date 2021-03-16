@@ -109,7 +109,7 @@ export const poland = {
     { original: warsaw8, thumbnail: warsaw8 },
     { original: warsaw9, thumbnail: warsaw9 },
   ],
-  video: "",
+  video: "https://www.youtube.com/embed/6KjOfVTX10Q",
   coordinates: [52.22, 21.01],
   region: "PL",
 };
@@ -136,7 +136,7 @@ export const spain = {
     { original: madrid9, thumbnail: madrid9 },
     { original: madrid10, thumbnail: madrid10 },
   ],
-  video: "",
+  video: "https://www.youtube.com/embed/L5JORXmV_A0",
   coordinates: [40.419348, -3.700897],
   region: "ES",
 };
@@ -166,7 +166,7 @@ export const italy = {
     { original: rome12, thumbnail: rome12 },
     { original: rome13, thumbnail: rome13 },
   ],
-  video: "",
+  video: "https://www.youtube.com/embed/FlRwssZYRM0",
   coordinates: [41.9, 12.49],
   region: "IT",
 };
@@ -191,7 +191,7 @@ export const russia = {
     { original: moscow8, thumbnail: moscow8 },
     { original: moscow9, thumbnail: moscow9 },
   ],
-  video: "",
+  video: "https://www.youtube.com/embed/YrNxPr4PKQo",
   coordinates: [55.75, 37.61],
   region: "RU",
 };
@@ -221,7 +221,7 @@ export const usa = {
     { original: washington12, thumbnail: washington12 },
     { original: washington13, thumbnail: washington13 },
   ],
-  video: "",
+  video: "https://www.youtube.com/embed/b7FNvq11CEw",
   coordinates: [38.907234, -77.02767],
   region: "US",
 };
@@ -248,7 +248,7 @@ export const switzerland = {
     { original: zurich9, thumbnail: zurich9 },
     { original: zurich10, thumbnail: zurich10 },
   ],
-  video: "",
+  video: "https://www.youtube.com/embed/oZRBUBbfIJ8",
   coordinates: [47.37, 8.5],
   region: "CH",
 };
@@ -273,7 +273,7 @@ export const czechia = {
     { original: prague8, thumbnail: prague8 },
     { original: prague9, thumbnail: prague9 },
   ],
-  video: "",
+  video: "https://www.youtube.com/embed/ajJj0x0928I",
   coordinates: [50.080293, 14.428983],
   region: "CZ",
 };
@@ -298,7 +298,7 @@ export const turkey = {
     { original: ankara7, thumbnail: ankara7 },
     { original: ankara8, thumbnail: ankara8 },
   ],
-  video: "",
+  video: "https://www.youtube.com/embed/r8rZQKXijb8",
   coordinates: [39.920756, 32.854049],
   region: "TR",
 };
