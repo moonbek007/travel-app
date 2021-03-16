@@ -1,13 +1,10 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useState, useContext } from "react";
 
 import s from "./currency.module.css";
 
-// Import api service for fetching currency
-import { apiService, currencyAPI } from "../../../services/api.service";
+import { currencyAPI } from "../../../services/api.service";
 
 import TravelAppContext from "../../context/context";
-// import library for converting rates
-const fx = require("./money.js");
 
 const Currency = () => {
   const [USDrate, SetUSDRate] = useState(1);
@@ -32,8 +29,6 @@ const Currency = () => {
         currency.name["EN"] === "RUB" ? "1.0000" : response.rates.RUB.toFixed(4)
       } `
     );
-    fx.rates = response.rates;
-    fx.base = response.base;
   }
 
   const promise = new Promise((resolve, reject) => {

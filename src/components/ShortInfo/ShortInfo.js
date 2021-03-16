@@ -1,9 +1,10 @@
 import React from "react";
-import shortInfoStyles from "./shortinfo.module.css";
+
+import s from "./shortinfo.module.css";
 function ShortInfo({ country, capital, info, picture, language }) {
   return (
-    <div className={shortInfoStyles.countryInfo}>
-      <div className={shortInfoStyles.mainPhoto}>
+    <div className={s.countryInfo}>
+      <div className={s.mainPhoto}>
         <img src={picture} alt="pic" width="60%" />
         <h3>
           {language === "EN"
@@ -12,7 +13,7 @@ function ShortInfo({ country, capital, info, picture, language }) {
             ? `${country} , столица ${capital}.`
             : `${country} , başkent ${capital}.`}
         </h3>
-        <p>{info}</p>
+        <p className={s.country_information}>{info}</p>
       </div>
     </div>
   );

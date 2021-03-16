@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useContext } from "react";
 import useParallax from "../../custom-hooks/useParallax";
-import headerStyles from "./header.module.css";
+import s from "./header.module.css";
 
 import leftArrowLogo from "../../assets/left_arrow.svg";
 import rightArrowLogo from "../../assets/right_arrow.svg";
@@ -33,7 +33,7 @@ function MainPageHeader() {
 
   return (
     <header style={currentBgPosition}>
-      <div className={headerStyles.rowOne}>
+      <div className={s.rowOne}>
         <img src={travelAppLogo} alt="travel-logo" />
         <div>
           <select
@@ -50,8 +50,10 @@ function MainPageHeader() {
           </select>
         </div>
       </div>
-      <div className={headerStyles.rowTwo}></div>
-      <div className={headerStyles.rowThree}>
+
+      <div className={s.rowTwo} />
+      <div className={s.rowThree}>
+
         <button
           onClick={(event) => {
             handleSearchTextSubmit(event, dispatch);
@@ -67,10 +69,10 @@ function MainPageHeader() {
           type="text"
           placeholder={`${
             language === "EN"
-              ? " e.g. Italy , e.g. Rome"
+              ? "Italy , Rome"
               : language === "РУС"
-              ? "прим. Италия , прим. Рим"
-              : "örneğin İtalya , örneğin Roma"
+              ? "Италия , Рим"
+              : "İtalya , Roma"
           }`}
           ref={inputRef}
           value={searchText}
