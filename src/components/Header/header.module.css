@@ -85,3 +85,7 @@ header {
 .rowThree img {
   height: 100%;
 }
+
+select {
+  cursor: pointer;
+}

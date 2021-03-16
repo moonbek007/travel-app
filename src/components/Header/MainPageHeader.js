@@ -50,14 +50,7 @@ function MainPageHeader() {
           </select>
         </div>
       </div>
-      <div className={headerStyles.rowTwo}>
-        <button>
-          <img src={leftArrowLogo} alt="left-arrow-logo" />
-        </button>
-        <button>
-          <img src={rightArrowLogo} alt="right-arrow-logo" />
-        </button>
-      </div>
+      <div className={headerStyles.rowTwo}></div>
       <div className={headerStyles.rowThree}>
         <button
           onClick={(event) => {
